@@ -22,6 +22,7 @@
 		43C2EDF9178A6B0C00C45F14 /* WindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 43C2EDF7178A6B0C00C45F14 /* WindowController.xib */; };
 		43C2EE14178ABCAD00C45F14 /* JSONModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 43C2EE13178ABCAD00C45F14 /* JSONModel.m */; };
 		43C2EE1A178AC91000C45F14 /* JSONDataType.m in Sources */ = {isa = PBXBuildFile; fileRef = 43C2EE19178AC91000C45F14 /* JSONDataType.m */; };
+		43E71C35181FB343006F80FA /* ModelBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 43E71C34181FB343006F80FA /* ModelBase.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +57,9 @@
 		43C2EE13178ABCAD00C45F14 /* JSONModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONModel.m; sourceTree = "<group>"; };
 		43C2EE18178AC91000C45F14 /* JSONDataType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONDataType.h; sourceTree = "<group>"; };
 		43C2EE19178AC91000C45F14 /* JSONDataType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONDataType.m; sourceTree = "<group>"; };
+		43E71C32181FB343006F80FA /* JSONModelBaseProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONModelBaseProtocol.h; sourceTree = "<group>"; };
+		43E71C33181FB343006F80FA /* ModelBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModelBase.h; sourceTree = "<group>"; };
+		43E71C34181FB343006F80FA /* ModelBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModelBase.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +77,7 @@
 		43C2EDCA178A694D00C45F14 = {
 			isa = PBXGroup;
 			children = (
+				43E71C31181FB343006F80FA /* BaseClassesToBeReferredFromProject */,
 				43C2D07E180FF82B002C81FF /* Images.xcassets */,
 				43C2EDDC178A694D00C45F14 /* json-to-model */,
 				43C2EDD5178A694D00C45F14 /* Frameworks */,
@@ -147,6 +152,16 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		43E71C31181FB343006F80FA /* BaseClassesToBeReferredFromProject */ = {
+			isa = PBXGroup;
+			children = (
+				43E71C32181FB343006F80FA /* JSONModelBaseProtocol.h */,
+				43E71C33181FB343006F80FA /* ModelBase.h */,
+				43E71C34181FB343006F80FA /* ModelBase.m */,
+			);
+			path = BaseClassesToBeReferredFromProject;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -214,6 +229,7 @@
 			files = (
 				4345F4AF1807C91600C823D2 /* NSString+StringHelper.m in Sources */,
 				4345F4B51807D2E700C823D2 /* StringValidator.m in Sources */,
+				43E71C35181FB343006F80FA /* ModelBase.m in Sources */,
 				4345F4BB1807FFDE00C823D2 /* Validator.m in Sources */,
 				4345F4B21807CDB900C823D2 /* NumberValidator.m in Sources */,
 				43C2EDE3178A694D00C45F14 /* main.m in Sources */,
