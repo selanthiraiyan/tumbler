@@ -1,0 +1,369 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4345F4AF1807C91600C823D2 /* NSString+StringHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 4345F4AE1807C91600C823D2 /* NSString+StringHelper.m */; };
+		4345F4B21807CDB900C823D2 /* NumberValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = 4345F4B11807CDB900C823D2 /* NumberValidator.m */; };
+		4345F4B51807D2E700C823D2 /* StringValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = 4345F4B41807D2E700C823D2 /* StringValidator.m */; };
+		4345F4B81807FE0C00C823D2 /* Condition.m in Sources */ = {isa = PBXBuildFile; fileRef = 4345F4B71807FE0C00C823D2 /* Condition.m */; };
+		4345F4BB1807FFDE00C823D2 /* Validator.m in Sources */ = {isa = PBXBuildFile; fileRef = 4345F4BA1807FFDE00C823D2 /* Validator.m */; };
+		43C2D07F180FF82B002C81FF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43C2D07E180FF82B002C81FF /* Images.xcassets */; };
+		43C2EDD7178A694D00C45F14 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43C2EDD6178A694D00C45F14 /* Cocoa.framework */; };
+		43C2EDE1178A694D00C45F14 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 43C2EDDF178A694D00C45F14 /* InfoPlist.strings */; };
+		43C2EDE3178A694D00C45F14 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 43C2EDE2178A694D00C45F14 /* main.m */; };
+		43C2EDE7178A694D00C45F14 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 43C2EDE5178A694D00C45F14 /* Credits.rtf */; };
+		43C2EDEA178A694D00C45F14 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 43C2EDE9178A694D00C45F14 /* AppDelegate.m */; };
+		43C2EDED178A694E00C45F14 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 43C2EDEB178A694E00C45F14 /* MainMenu.xib */; };
+		43C2EDF8178A6B0C00C45F14 /* WindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 43C2EDF6178A6B0C00C45F14 /* WindowController.m */; };
+		43C2EDF9178A6B0C00C45F14 /* WindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 43C2EDF7178A6B0C00C45F14 /* WindowController.xib */; };
+		43C2EE14178ABCAD00C45F14 /* JSONModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 43C2EE13178ABCAD00C45F14 /* JSONModel.m */; };
+		43C2EE1A178AC91000C45F14 /* JSONDataType.m in Sources */ = {isa = PBXBuildFile; fileRef = 43C2EE19178AC91000C45F14 /* JSONDataType.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		4345F4AD1807C91600C823D2 /* NSString+StringHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+StringHelper.h"; sourceTree = "<group>"; };
+		4345F4AE1807C91600C823D2 /* NSString+StringHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+StringHelper.m"; sourceTree = "<group>"; };
+		4345F4B01807CDB900C823D2 /* NumberValidator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NumberValidator.h; sourceTree = "<group>"; };
+		4345F4B11807CDB900C823D2 /* NumberValidator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NumberValidator.m; sourceTree = "<group>"; };
+		4345F4B31807D2E700C823D2 /* StringValidator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StringValidator.h; sourceTree = "<group>"; };
+		4345F4B41807D2E700C823D2 /* StringValidator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StringValidator.m; sourceTree = "<group>"; };
+		4345F4B61807FE0C00C823D2 /* Condition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Condition.h; sourceTree = "<group>"; };
+		4345F4B71807FE0C00C823D2 /* Condition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Condition.m; sourceTree = "<group>"; };
+		4345F4B91807FFDE00C823D2 /* Validator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Validator.h; sourceTree = "<group>"; };
+		4345F4BA1807FFDE00C823D2 /* Validator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Validator.m; sourceTree = "<group>"; };
+		43C2D07E180FF82B002C81FF /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = Tumbler/Images.xcassets; sourceTree = "<group>"; };
+		43C2EDD3178A694D00C45F14 /* Tumbler.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tumbler.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		43C2EDD6178A694D00C45F14 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		43C2EDD9178A694D00C45F14 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		43C2EDDA178A694D00C45F14 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		43C2EDDB178A694D00C45F14 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		43C2EDDE178A694D00C45F14 /* Tumbler-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Tumbler-Info.plist"; sourceTree = "<group>"; };
+		43C2EDE0178A694D00C45F14 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		43C2EDE2178A694D00C45F14 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		43C2EDE4178A694D00C45F14 /* Tumbler-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tumbler-Prefix.pch"; sourceTree = "<group>"; };
+		43C2EDE6178A694D00C45F14 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		43C2EDE8178A694D00C45F14 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		43C2EDE9178A694D00C45F14 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		43C2EDEC178A694E00C45F14 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		43C2EDF5178A6B0C00C45F14 /* WindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WindowController.h; sourceTree = "<group>"; };
+		43C2EDF6178A6B0C00C45F14 /* WindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WindowController.m; sourceTree = "<group>"; };
+		43C2EDF7178A6B0C00C45F14 /* WindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WindowController.xib; sourceTree = "<group>"; };
+		43C2EDFA178A78BC00C45F14 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		43C2EE12178ABCAD00C45F14 /* JSONModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONModel.h; sourceTree = "<group>"; };
+		43C2EE13178ABCAD00C45F14 /* JSONModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONModel.m; sourceTree = "<group>"; };
+		43C2EE18178AC91000C45F14 /* JSONDataType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONDataType.h; sourceTree = "<group>"; };
+		43C2EE19178AC91000C45F14 /* JSONDataType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONDataType.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		43C2EDD0178A694D00C45F14 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				43C2EDD7178A694D00C45F14 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		43C2EDCA178A694D00C45F14 = {
+			isa = PBXGroup;
+			children = (
+				43C2D07E180FF82B002C81FF /* Images.xcassets */,
+				43C2EDDC178A694D00C45F14 /* json-to-model */,
+				43C2EDD5178A694D00C45F14 /* Frameworks */,
+				43C2EDD4178A694D00C45F14 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		43C2EDD4178A694D00C45F14 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				43C2EDD3178A694D00C45F14 /* Tumbler.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		43C2EDD5178A694D00C45F14 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				43C2EDD6178A694D00C45F14 /* Cocoa.framework */,
+				43C2EDD8178A694D00C45F14 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		43C2EDD8178A694D00C45F14 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				43C2EDD9178A694D00C45F14 /* AppKit.framework */,
+				43C2EDDA178A694D00C45F14 /* CoreData.framework */,
+				43C2EDDB178A694D00C45F14 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		43C2EDDC178A694D00C45F14 /* json-to-model */ = {
+			isa = PBXGroup;
+			children = (
+				43C2EE18178AC91000C45F14 /* JSONDataType.h */,
+				43C2EE19178AC91000C45F14 /* JSONDataType.m */,
+				43C2EDE8178A694D00C45F14 /* AppDelegate.h */,
+				43C2EDE9178A694D00C45F14 /* AppDelegate.m */,
+				43C2EDEB178A694E00C45F14 /* MainMenu.xib */,
+				43C2EDF5178A6B0C00C45F14 /* WindowController.h */,
+				43C2EDF6178A6B0C00C45F14 /* WindowController.m */,
+				43C2EDF7178A6B0C00C45F14 /* WindowController.xib */,
+				43C2EDFA178A78BC00C45F14 /* Constants.h */,
+				43C2EE12178ABCAD00C45F14 /* JSONModel.h */,
+				43C2EE13178ABCAD00C45F14 /* JSONModel.m */,
+				4345F4AD1807C91600C823D2 /* NSString+StringHelper.h */,
+				4345F4AE1807C91600C823D2 /* NSString+StringHelper.m */,
+				43C2EDDD178A694D00C45F14 /* Supporting Files */,
+				4345F4B01807CDB900C823D2 /* NumberValidator.h */,
+				4345F4B11807CDB900C823D2 /* NumberValidator.m */,
+				4345F4B31807D2E700C823D2 /* StringValidator.h */,
+				4345F4B41807D2E700C823D2 /* StringValidator.m */,
+				4345F4B61807FE0C00C823D2 /* Condition.h */,
+				4345F4B71807FE0C00C823D2 /* Condition.m */,
+				4345F4B91807FFDE00C823D2 /* Validator.h */,
+				4345F4BA1807FFDE00C823D2 /* Validator.m */,
+			);
+			path = "json-to-model";
+			sourceTree = "<group>";
+		};
+		43C2EDDD178A694D00C45F14 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				43C2EDDE178A694D00C45F14 /* Tumbler-Info.plist */,
+				43C2EDDF178A694D00C45F14 /* InfoPlist.strings */,
+				43C2EDE2178A694D00C45F14 /* main.m */,
+				43C2EDE4178A694D00C45F14 /* Tumbler-Prefix.pch */,
+				43C2EDE5178A694D00C45F14 /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		43C2EDD2178A694D00C45F14 /* Tumbler */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 43C2EDF0178A694E00C45F14 /* Build configuration list for PBXNativeTarget "Tumbler" */;
+			buildPhases = (
+				43C2EDCF178A694D00C45F14 /* Sources */,
+				43C2EDD0178A694D00C45F14 /* Frameworks */,
+				43C2EDD1178A694D00C45F14 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Tumbler;
+			productName = "json-to-model";
+			productReference = 43C2EDD3178A694D00C45F14 /* Tumbler.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		43C2EDCB178A694D00C45F14 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = "Sharma Elanthiraiyan";
+			};
+			buildConfigurationList = 43C2EDCE178A694D00C45F14 /* Build configuration list for PBXProject "Tumbler" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 43C2EDCA178A694D00C45F14;
+			productRefGroup = 43C2EDD4178A694D00C45F14 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				43C2EDD2178A694D00C45F14 /* Tumbler */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		43C2EDD1178A694D00C45F14 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				43C2EDE1178A694D00C45F14 /* InfoPlist.strings in Resources */,
+				43C2D07F180FF82B002C81FF /* Images.xcassets in Resources */,
+				43C2EDE7178A694D00C45F14 /* Credits.rtf in Resources */,
+				43C2EDED178A694E00C45F14 /* MainMenu.xib in Resources */,
+				43C2EDF9178A6B0C00C45F14 /* WindowController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		43C2EDCF178A694D00C45F14 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4345F4AF1807C91600C823D2 /* NSString+StringHelper.m in Sources */,
+				4345F4B51807D2E700C823D2 /* StringValidator.m in Sources */,
+				4345F4BB1807FFDE00C823D2 /* Validator.m in Sources */,
+				4345F4B21807CDB900C823D2 /* NumberValidator.m in Sources */,
+				43C2EDE3178A694D00C45F14 /* main.m in Sources */,
+				43C2EDEA178A694D00C45F14 /* AppDelegate.m in Sources */,
+				43C2EDF8178A6B0C00C45F14 /* WindowController.m in Sources */,
+				43C2EE14178ABCAD00C45F14 /* JSONModel.m in Sources */,
+				43C2EE1A178AC91000C45F14 /* JSONDataType.m in Sources */,
+				4345F4B81807FE0C00C823D2 /* Condition.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		43C2EDDF178A694D00C45F14 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				43C2EDE0178A694D00C45F14 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		43C2EDE5178A694D00C45F14 /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				43C2EDE6178A694D00C45F14 /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		43C2EDEB178A694E00C45F14 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				43C2EDEC178A694E00C45F14 /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		43C2EDEE178A694E00C45F14 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		43C2EDEF178A694E00C45F14 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		43C2EDF1178A694E00C45F14 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "json-to-model/Tumbler-Prefix.pch";
+				INFOPLIST_FILE = "json-to-model/Tumbler-Info.plist";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		43C2EDF2178A694E00C45F14 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "json-to-model/Tumbler-Prefix.pch";
+				INFOPLIST_FILE = "json-to-model/Tumbler-Info.plist";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		43C2EDCE178A694D00C45F14 /* Build configuration list for PBXProject "Tumbler" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				43C2EDEE178A694E00C45F14 /* Debug */,
+				43C2EDEF178A694E00C45F14 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		43C2EDF0178A694E00C45F14 /* Build configuration list for PBXNativeTarget "Tumbler" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				43C2EDF1178A694E00C45F14 /* Debug */,
+				43C2EDF2178A694E00C45F14 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 43C2EDCB178A694D00C45F14 /* Project object */;
+}
