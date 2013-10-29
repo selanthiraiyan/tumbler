@@ -16,7 +16,6 @@
 		43C2EDD7178A694D00C45F14 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43C2EDD6178A694D00C45F14 /* Cocoa.framework */; };
 		43C2EDE1178A694D00C45F14 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 43C2EDDF178A694D00C45F14 /* InfoPlist.strings */; };
 		43C2EDE3178A694D00C45F14 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 43C2EDE2178A694D00C45F14 /* main.m */; };
-		43C2EDE7178A694D00C45F14 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 43C2EDE5178A694D00C45F14 /* Credits.rtf */; };
 		43C2EDEA178A694D00C45F14 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 43C2EDE9178A694D00C45F14 /* AppDelegate.m */; };
 		43C2EDED178A694E00C45F14 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 43C2EDEB178A694E00C45F14 /* MainMenu.xib */; };
 		43C2EDF8178A6B0C00C45F14 /* WindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 43C2EDF6178A6B0C00C45F14 /* WindowController.m */; };
@@ -46,7 +45,6 @@
 		43C2EDE0178A694D00C45F14 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		43C2EDE2178A694D00C45F14 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		43C2EDE4178A694D00C45F14 /* Tumbler-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tumbler-Prefix.pch"; sourceTree = "<group>"; };
-		43C2EDE6178A694D00C45F14 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
 		43C2EDE8178A694D00C45F14 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		43C2EDE9178A694D00C45F14 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		43C2EDEC178A694E00C45F14 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
@@ -145,7 +143,6 @@
 				43C2EDDF178A694D00C45F14 /* InfoPlist.strings */,
 				43C2EDE2178A694D00C45F14 /* main.m */,
 				43C2EDE4178A694D00C45F14 /* Tumbler-Prefix.pch */,
-				43C2EDE5178A694D00C45F14 /* Credits.rtf */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -203,7 +200,6 @@
 			files = (
 				43C2EDE1178A694D00C45F14 /* InfoPlist.strings in Resources */,
 				43C2D07F180FF82B002C81FF /* Images.xcassets in Resources */,
-				43C2EDE7178A694D00C45F14 /* Credits.rtf in Resources */,
 				43C2EDED178A694E00C45F14 /* MainMenu.xib in Resources */,
 				43C2EDF9178A6B0C00C45F14 /* WindowController.xib in Resources */,
 			);
@@ -238,14 +234,6 @@
 				43C2EDE0178A694D00C45F14 /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		43C2EDE5178A694D00C45F14 /* Credits.rtf */ = {
-			isa = PBXVariantGroup;
-			children = (
-				43C2EDE6178A694D00C45F14 /* en */,
-			);
-			name = Credits.rtf;
 			sourceTree = "<group>";
 		};
 		43C2EDEB178A694E00C45F14 /* MainMenu.xib */ = {
