@@ -17,6 +17,16 @@
     NSString *string = [NSString stringWithFormat:@"self.%@", propertyName];
     NSMutableArray *conditions = [NSMutableArray array];
     
+    //Checking required
+    BOOL required = [[schemaDefinition objectForKey:@"required"] boolValue];
+    if (required) {
+        Condition *condition = [[Condition alloc]init];
+        condition.conditionStringInsideIf = [NSString stringWithFormat:@"%@ == nil"
+                                             , string];
+        condition.userInfoForError = [NSString stringWithFormat:@"%@ is a required property.", propertyName];
+        [conditions addObject:condition];
+    }
+    
     //Checking maxLength
     NSNumber *maxLength = [schemaDefinition objectForKey:@"maxLength"];
     if (maxLength) {

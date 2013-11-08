@@ -14,7 +14,7 @@
 #define KEY_TO_STORE_URL @"store/svnUrl"
 #define KEY_TO_STORE_PARENT_CLASS_NAME @"store/parentClassName"
 
-#define SHOULD_CREATE_VALIDATION_METHODS NO
+#define SHOULD_CREATE_VALIDATION_METHODS YES
 
 @interface Constants : NSObject
 

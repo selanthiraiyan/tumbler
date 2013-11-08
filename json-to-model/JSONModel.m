@@ -10,6 +10,8 @@
 #import "Condition.h"
 #import "Validator.h"
 #import "Constants.h"
+#import "NSString+StringHelper.h"
+
 @implementation JSONModel
 @synthesize className;
 @synthesize parentClassName;
@@ -151,24 +153,33 @@
 - (NSString*)getValidationImplementationPart
 {
     if (self.schemaDefinition && SHOULD_CREATE_VALIDATION_METHODS) {
-        NSDictionary *properties = [self.schemaDefinition objectForKey:@"properties"];
         
-        if (properties) {
-            NSMutableArray *conditions = [NSMutableArray array];
-
-            for (NSString *requiredPropertyName in [properties allKeys]) {
-                NSDictionary *property = [properties objectForKey:requiredPropertyName];
-                if ([property objectForKey:@"required"]) {
-                    Condition *nilCondition = [[Condition alloc]init];
-                    nilCondition.conditionStringInsideIf = [NSString stringWithFormat:@"self.%@ == nil", requiredPropertyName];
-                    nilCondition.userInfoForError = [NSString stringWithFormat:@"%@ is nil which is a required property.", requiredPropertyName];
-                    [conditions addObject:nilCondition];
-                }
+        NSMutableString *condition;
+        for (JSONDataType *dataType in self.consistsOfInstanceVarsOfClass) {
+            
+            if (dataType.schemaDefinition == nil) {
+                continue;
             }
+            
+            if (condition == nil) {
+                condition = [NSMutableString string];
+            }
+            else {
+                [condition appendString:@" || "];
+            }
+            [condition appendFormat:@"[self is%@Valid:error] == NO", [dataType.instanceName capitalizeFirstLetter]];
+            
+        }
+        
+        if (condition != nil) {
             return [NSString stringWithFormat:@"\n- (BOOL)isValid:(NSError**)error\n"
                     "{\n"
-                    "%@\n"
-                    "}\n", [Validator getValidationMethodContent:conditions]];
+                    "if (%@)\n"
+                    "{\n"
+                    "return NO;\n"
+                    "}\n"
+                    "return YES;\n"
+                    "}\n", condition];
         }
     }
     return nil;

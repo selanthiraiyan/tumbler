@@ -18,12 +18,22 @@
     NSString *number = [NSString stringWithFormat:@"self.%@", propertyName];
     NSMutableArray *conditions = [NSMutableArray array];
     
+    //Checking required
+    BOOL required = [[schemaDefinition objectForKey:@"required"] boolValue];
+    if (required) {
+        Condition *condition = [[Condition alloc]init];
+        condition.conditionStringInsideIf = [NSString stringWithFormat:@"%@ == nil"
+                                             , number];
+        condition.userInfoForError = [NSString stringWithFormat:@"%@ is a required property.", propertyName];
+        [conditions addObject:condition];
+    }
+    
     //Checking multipleOf
     NSNumber *multipleOf = [schemaDefinition objectForKey:@"multipleOf"];
     if (multipleOf) {
         Condition *condition = [[Condition alloc]init];
         condition.conditionStringInsideIf = [NSString stringWithFormat:@"(%@ / %f) != 0"
-                                          , [number addDoubleValueMethodCall], [multipleOf doubleValue]];
+                                             , [number addDoubleValueMethodCall], [multipleOf doubleValue]];
         condition.userInfoForError = @"multipleOf condition failed";
         [conditions addObject:condition];
     }
@@ -39,7 +49,7 @@
         if (exclusiveMaximum) {
             condition.conditionStringInsideIf = [NSString stringWithFormat:@"(%@ >= %f)", [number addDoubleValueMethodCall], [maximum doubleValue]];
         }
-
+        
         condition.userInfoForError = @"maximum condition failed";
         [conditions addObject:condition];
     }
