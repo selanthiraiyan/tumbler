@@ -38,19 +38,21 @@
 
 - (NSString*)getDeclarationHeaderPart
 {
-    if ([self.className isEqualToString:@"BOOL"]) {
-        return [NSString stringWithFormat:@"\n@property %@ %@;", className, instanceName];
+    NSString *comment = [NSString stringWithFormat:@" /*%@*/", self.schemaDefinition];
 
+    if ([self.className isEqualToString:@"BOOL"]) {
+        return [NSString stringWithFormat:@"\n@property %@ %@;%@", className, instanceName, comment];
+        
     }
     else {
-        return [NSString stringWithFormat:@"\n@property (strong) %@ *%@;", className, instanceName];
+        return [NSString stringWithFormat:@"\n@property (strong) %@ *%@;%@", className, instanceName, comment];
     }
-
+    
 }
 
 - (NSString*)getDeclarationImplementationPart
 {
-   return [NSString stringWithFormat:@"\n@synthesize %@;",self.instanceName];
+    return [NSString stringWithFormat:@"\n@synthesize %@;",self.instanceName];
 }
 
 - (NSString*)getValidationHeaderPart
