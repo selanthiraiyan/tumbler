@@ -23,7 +23,7 @@
         Condition *condition = [[Condition alloc]init];
         condition.conditionStringInsideIf = [NSString stringWithFormat:@"%@ == nil"
                                              , string];
-        condition.userInfoForError = [NSString stringWithFormat:@"%@ is a required property.", propertyName];
+        [super setErrorMessageForConditionNamed:@"required" schemaDefinition:schemaDefinition intoCondition:condition];
         [conditions addObject:condition];
     }
     
@@ -32,7 +32,8 @@
     if (maxLength) {
         Condition *condition = [[Condition alloc]init];
         condition.conditionStringInsideIf = [NSString stringWithFormat:@"[%@ length] > %@", string, maxLength];
-        condition.userInfoForError = @"maxLength condition failed";
+        [super setErrorMessageForConditionNamed:@"maxLength" schemaDefinition:schemaDefinition intoCondition:condition];
+
         [conditions addObject:condition];
     }
     
@@ -41,7 +42,8 @@
     if (minLength) {
         Condition *condition = [[Condition alloc]init];
         condition.conditionStringInsideIf = [NSString stringWithFormat:@"[%@ length] < %@", string, minLength];
-        condition.userInfoForError = @"minLength condition failed";
+        [super setErrorMessageForConditionNamed:@"minLength" schemaDefinition:schemaDefinition intoCondition:condition];
+
         [conditions addObject:condition];
     }
     
@@ -50,7 +52,8 @@
     if (pattern) {
         Condition *condition = [[Condition alloc]init];
         condition.conditionStringInsideIf = [NSString stringWithFormat:@"[[NSPredicate predicateWithFormat:@\"SELF MATCHES %@\"] evaluateWithObject:%@]", pattern, string];
-        condition.userInfoForError = @"pattern condition failed";
+        [super setErrorMessageForConditionNamed:@"pattern" schemaDefinition:schemaDefinition intoCondition:condition];
+
         [conditions addObject:condition];
     }
     return [super getValidationMethodContent:conditions];

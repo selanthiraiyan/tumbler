@@ -25,16 +25,20 @@
         condition.conditionStringInsideIf = [NSString stringWithFormat:@"%@ == nil"
                                              , number];
         condition.userInfoForError = [NSString stringWithFormat:@"%@ is a required property.", propertyName];
+        [super setErrorMessageForConditionNamed:@"required" schemaDefinition:schemaDefinition intoCondition:condition];
+
         [conditions addObject:condition];
     }
     
     //Checking multipleOf
     NSNumber *multipleOf = [schemaDefinition objectForKey:@"multipleOf"];
+    NSString *multipleOfErrorMessage = [schemaDefinition objectForKey:@"multipleOf"];
     if (multipleOf) {
         Condition *condition = [[Condition alloc]init];
         condition.conditionStringInsideIf = [NSString stringWithFormat:@"(%@ / %f) != 0"
                                              , [number addDoubleValueMethodCall], [multipleOf doubleValue]];
-        condition.userInfoForError = @"multipleOf condition failed";
+        
+        [super setErrorMessageForConditionNamed:@"multipleOf" schemaDefinition:schemaDefinition intoCondition:condition];
         [conditions addObject:condition];
     }
     
@@ -49,8 +53,8 @@
         if (exclusiveMaximum) {
             condition.conditionStringInsideIf = [NSString stringWithFormat:@"(%@ >= %f)", [number addDoubleValueMethodCall], [maximum doubleValue]];
         }
-        
-        condition.userInfoForError = @"maximum condition failed";
+        [super setErrorMessageForConditionNamed:@"maximum" schemaDefinition:schemaDefinition intoCondition:condition];
+
         [conditions addObject:condition];
     }
     
@@ -65,8 +69,8 @@
         if (exclusiveMinimum) {
             condition.conditionStringInsideIf = [NSString stringWithFormat:@"(%@ <= %f)", [number addDoubleValueMethodCall], [minimum doubleValue]];
         }
-        
-        condition.userInfoForError = @"minimum condition failed";
+        [super setErrorMessageForConditionNamed:@"minimum" schemaDefinition:schemaDefinition intoCondition:condition];
+
         [conditions addObject:condition];
     }
     

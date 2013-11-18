@@ -7,9 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Condition.h"
 
 @interface Validator : NSObject
 
 + (NSString*)getValidationMethodContent:(NSArray*)conditions;
++ (void)setErrorMessageForConditionNamed:(NSString*)conditionName schemaDefinition:(NSDictionary*)schemaDefinition intoCondition:(Condition*)condition;
 
 @end

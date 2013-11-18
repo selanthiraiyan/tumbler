@@ -12,5 +12,6 @@
 
 @property (strong) NSString *conditionStringInsideIf;
 @property (strong) NSString *userInfoForError;
+@property BOOL isCustomErrorMessageSpecified;
 
 @end

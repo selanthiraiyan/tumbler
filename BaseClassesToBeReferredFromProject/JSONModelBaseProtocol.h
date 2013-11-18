@@ -18,4 +18,7 @@
 - (NSDictionary*)toDict;
 - (id)initWithDict:(NSDictionary*)dict;
 
+//For validation purpose
+- (BOOL)isValid:(NSError**)error;
+
 @end
