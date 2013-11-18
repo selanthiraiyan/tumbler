@@ -12,5 +12,6 @@
 
 - (NSString*)toJSONString;
 - (id)initWithDict:(NSDictionary*)dict;
+- (NSString*)errorMessageForKey:(NSString*)key;
 
 @end

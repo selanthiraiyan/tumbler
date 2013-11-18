@@ -18,7 +18,7 @@
     for (Condition *condition in conditions) {
         
         NSString *conditionString;
-        if (condition.isCustomErrorMessageSpecified == NO) {
+        if (condition.isCustomErrorMessageSpecified) {
             conditionString = [NSString stringWithFormat:@"%@ (%@)\n"
                                "{\n"
                                "NSMutableDictionary* details = [NSMutableDictionary dictionary];\n"
@@ -50,9 +50,11 @@
     NSString *error = [schemaDefinition objectForKey:[NSString stringWithFormat: @"%@ErrorMessage", conditionName]];
     if (error) {
         condition.isCustomErrorMessageSpecified = YES;
-        condition.userInfoForError = [NSString stringWithFormat:@"fetchLabelTextForKey(@\"%@@ErrorMessage", conditionName];
+        condition.userInfoForError = [NSString stringWithFormat:@"[super errorMessageForKey:@\"%@\"]", error];
     }
-    condition.userInfoForError = [NSString stringWithFormat:@"%@ condition failed", conditionName];;
+    else {
+        condition.userInfoForError = [NSString stringWithFormat:@"%@ condition failed", conditionName];;
+    }
 }
 
 @end

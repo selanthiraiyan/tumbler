@@ -115,4 +115,9 @@
 {
     return @"ServletGroup";
 }
+
+- (NSString*)errorMessageForKey:(NSString*)key
+{
+    return key;
+}
 @end
