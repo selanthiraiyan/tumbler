@@ -20,22 +20,24 @@
         NSString *conditionString;
         if (condition.isCustomErrorMessageSpecified == NO) {
             conditionString = [NSString stringWithFormat:@"%@ (%@)\n"
-                                         "{\n"
-                                         "NSMutableDictionary* details = [NSMutableDictionary dictionary];\n"
-                                         "[details setValue:@\"%@\" forKey:NSLocalizedDescriptionKey];\n"
-                                         "*error = [NSError errorWithDomain:@\"Tumbler\" code:200 userInfo:details];\n"
-                                         "return NO;\n"
-                                         "}\n", ifPrinted?@"else if":@"if", condition.conditionStringInsideIf, condition.userInfoForError];
-        }
-        else {
-            conditionString = [NSString stringWithFormat:@"%@ (%@)\n"
                                "{\n"
                                "NSMutableDictionary* details = [NSMutableDictionary dictionary];\n"
                                "[details setValue:%@ forKey:NSLocalizedDescriptionKey];\n"
                                "*error = [NSError errorWithDomain:@\"Tumbler\" code:200 userInfo:details];\n"
                                "return NO;\n"
-                               "}\n", ifPrinted?@"else if":@"if", condition.conditionStringInsideIf, condition.userInfoForError];        }
-
+                               "}\n", ifPrinted?@"else if":@"if", condition.conditionStringInsideIf, condition.userInfoForError];
+        }
+        else
+        {
+            conditionString = [NSString stringWithFormat:@"%@ (%@)\n"
+                               "{\n"
+                               "NSMutableDictionary* details = [NSMutableDictionary dictionary];\n"
+                               "[details setValue:@\"%@\" forKey:NSLocalizedDescriptionKey];\n"
+                               "*error = [NSError errorWithDomain:@\"Tumbler\" code:200 userInfo:details];\n"
+                               "return NO;\n"
+                               "}\n", ifPrinted?@"else if":@"if", condition.conditionStringInsideIf, condition.userInfoForError];
+        }
+        
         [validationString appendString:conditionString];
         ifPrinted = YES;
     }
