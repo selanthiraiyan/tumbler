@@ -81,6 +81,10 @@
     	propertyName = [NSString stringWithCString:property_getName(property)];
         id myObject = [self valueForKey:propertyName];
         
+        if (myObject == nil) {
+            continue;
+        }
+        
         if ([myObject isKindOfClass:[NSArray class]]) {
             NSMutableArray *dictArray = [NSMutableArray array];
             for (id object in myObject) {
