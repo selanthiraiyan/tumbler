@@ -239,7 +239,7 @@
             JSONModel *responseModel = [[JSONModel alloc]initWithName:className];
             responseModel.servletName = servletName;
             responseModel.servletGroup = servletGroup;
-            responseModel.servletVersion = servletGroup;
+            responseModel.servletVersion = servletVersion;
             responseModel.parentClassName = [self.parentClass stringValue];
             responseModel.isRequest = NO;
             responseModel.schemaDefinition = responsePart;
