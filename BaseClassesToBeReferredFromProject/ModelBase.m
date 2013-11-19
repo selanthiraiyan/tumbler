@@ -37,7 +37,7 @@
                 
                 NSMutableArray *array = [NSMutableArray array];
                 for (id innerObject in myObject) {
-                    if ([NSMutableArray isKindOfClass:[NSDictionary class]]) {
+                    if ([innerObject isKindOfClass:[NSDictionary class]]) {
                         if (NSClassFromString(className) != nil) {
                             [array addObject:[[NSClassFromString(className) alloc]initWithDict:innerObject]];
                         }
