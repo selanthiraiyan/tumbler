@@ -45,7 +45,7 @@
     return validationString;
 }
 
-+ (void)setErrorMessageForConditionNamed:(NSString*)conditionName schemaDefinition:(NSDictionary*)schemaDefinition intoCondition:(Condition*)condition
++ (void)setErrorMessageForConditionNamed:(NSString*)conditionName schemaDefinition:(NSDictionary*)schemaDefinition propertyName:(NSString*)propertyName intoCondition:(Condition*)condition
 {
     NSString *error = [schemaDefinition objectForKey:[NSString stringWithFormat: @"%@ErrorMessage", conditionName]];
     if (error) {
@@ -53,7 +53,7 @@
         condition.userInfoForError = [NSString stringWithFormat:@"[super errorMessageForKey:@\"%@\"]", error];
     }
     else {
-        condition.userInfoForError = [NSString stringWithFormat:@"%@ condition failed", conditionName];;
+        condition.userInfoForError = [NSString stringWithFormat:@"%@ condition failed for property %@", conditionName, propertyName];
     }
 }
 

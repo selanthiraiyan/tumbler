@@ -12,6 +12,6 @@
 @interface Validator : NSObject
 
 + (NSString*)getValidationMethodContent:(NSArray*)conditions;
-+ (void)setErrorMessageForConditionNamed:(NSString*)conditionName schemaDefinition:(NSDictionary*)schemaDefinition intoCondition:(Condition*)condition;
++ (void)setErrorMessageForConditionNamed:(NSString*)conditionName schemaDefinition:(NSDictionary*)schemaDefinition propertyName:(NSString*)propertyName intoCondition:(Condition*)condition;
 
 @end

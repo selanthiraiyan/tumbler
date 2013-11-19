@@ -24,8 +24,7 @@
         Condition *condition = [[Condition alloc]init];
         condition.conditionStringInsideIf = [NSString stringWithFormat:@"%@ == nil"
                                              , number];
-        condition.userInfoForError = [NSString stringWithFormat:@"%@ is a required property.", propertyName];
-        [super setErrorMessageForConditionNamed:@"required" schemaDefinition:schemaDefinition intoCondition:condition];
+        [super setErrorMessageForConditionNamed:@"required" schemaDefinition:schemaDefinition propertyName:propertyName intoCondition:condition];
 
         [conditions addObject:condition];
     }
@@ -38,7 +37,7 @@
         condition.conditionStringInsideIf = [NSString stringWithFormat:@"(%@ / %f) != 0"
                                              , [number addDoubleValueMethodCall], [multipleOf doubleValue]];
         
-        [super setErrorMessageForConditionNamed:@"multipleOf" schemaDefinition:schemaDefinition intoCondition:condition];
+        [super setErrorMessageForConditionNamed:@"multipleOf" schemaDefinition:schemaDefinition propertyName:propertyName intoCondition:condition];
         [conditions addObject:condition];
     }
     
@@ -53,7 +52,7 @@
         if (exclusiveMaximum) {
             condition.conditionStringInsideIf = [NSString stringWithFormat:@"(%@ >= %f)", [number addDoubleValueMethodCall], [maximum doubleValue]];
         }
-        [super setErrorMessageForConditionNamed:@"maximum" schemaDefinition:schemaDefinition intoCondition:condition];
+        [super setErrorMessageForConditionNamed:@"maximum" schemaDefinition:schemaDefinition propertyName:propertyName intoCondition:condition];
 
         [conditions addObject:condition];
     }
@@ -69,7 +68,7 @@
         if (exclusiveMinimum) {
             condition.conditionStringInsideIf = [NSString stringWithFormat:@"(%@ <= %f)", [number addDoubleValueMethodCall], [minimum doubleValue]];
         }
-        [super setErrorMessageForConditionNamed:@"minimum" schemaDefinition:schemaDefinition intoCondition:condition];
+        [super setErrorMessageForConditionNamed:@"minimum" schemaDefinition:schemaDefinition propertyName:propertyName intoCondition:condition];
 
         [conditions addObject:condition];
     }

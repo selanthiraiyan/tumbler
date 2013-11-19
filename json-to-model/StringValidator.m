@@ -23,7 +23,7 @@
         Condition *condition = [[Condition alloc]init];
         condition.conditionStringInsideIf = [NSString stringWithFormat:@"%@ == nil"
                                              , string];
-        [super setErrorMessageForConditionNamed:@"required" schemaDefinition:schemaDefinition intoCondition:condition];
+        [super setErrorMessageForConditionNamed:@"required" schemaDefinition:schemaDefinition propertyName:propertyName intoCondition:condition];
         [conditions addObject:condition];
     }
     
@@ -32,7 +32,7 @@
     if (maxLength) {
         Condition *condition = [[Condition alloc]init];
         condition.conditionStringInsideIf = [NSString stringWithFormat:@"[%@ length] > %@", string, maxLength];
-        [super setErrorMessageForConditionNamed:@"maxLength" schemaDefinition:schemaDefinition intoCondition:condition];
+        [super setErrorMessageForConditionNamed:@"maxLength" schemaDefinition:schemaDefinition propertyName:propertyName intoCondition:condition];
 
         [conditions addObject:condition];
     }
@@ -42,7 +42,7 @@
     if (minLength) {
         Condition *condition = [[Condition alloc]init];
         condition.conditionStringInsideIf = [NSString stringWithFormat:@"[%@ length] < %@", string, minLength];
-        [super setErrorMessageForConditionNamed:@"minLength" schemaDefinition:schemaDefinition intoCondition:condition];
+        [super setErrorMessageForConditionNamed:@"minLength" schemaDefinition:schemaDefinition propertyName:propertyName intoCondition:condition];
 
         [conditions addObject:condition];
     }
@@ -52,7 +52,7 @@
     if (pattern) {
         Condition *condition = [[Condition alloc]init];
         condition.conditionStringInsideIf = [NSString stringWithFormat:@"[[NSPredicate predicateWithFormat:@\"SELF MATCHES %@\"] evaluateWithObject:%@]", pattern, string];
-        [super setErrorMessageForConditionNamed:@"pattern" schemaDefinition:schemaDefinition intoCondition:condition];
+        [super setErrorMessageForConditionNamed:@"pattern" schemaDefinition:schemaDefinition propertyName:propertyName intoCondition:condition];
 
         [conditions addObject:condition];
     }
