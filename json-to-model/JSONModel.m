@@ -144,7 +144,7 @@
 
 - (NSString*)getValidationHeaderPart
 {
-    if (self.schemaDefinition && SHOULD_CREATE_VALIDATION_METHODS) {
+    if (self.schemaDefinition) {
         return [NSString stringWithFormat:@"\n- (BOOL)isValid:(NSError**)error;"];
     }
     return nil;
@@ -152,7 +152,7 @@
 
 - (NSString*)getValidationImplementationPart
 {
-    if (self.schemaDefinition && SHOULD_CREATE_VALIDATION_METHODS) {
+    if (self.schemaDefinition ) {
         
         NSMutableString *condition;
         for (JSONDataType *dataType in self.consistsOfInstanceVarsOfClass) {

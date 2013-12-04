@@ -11,6 +11,7 @@
 @interface WindowController : NSWindowController
 
 @property (assign) IBOutlet NSSegmentedControl *sourceTypeSegment;
+@property (assign) IBOutlet NSSegmentedControl *shouldUseSchemaToGenerateClassFiles;
 @property (assign) IBOutlet NSTextField *url;
 @property (assign) IBOutlet NSTextField *userName;
 @property (assign) IBOutlet NSTextField *password;
@@ -21,7 +22,7 @@
 @property (assign) IBOutlet NSTextField *targetPath;
 @property (assign) IBOutlet NSButton *shouldCleanUpFolderBeforeGenerating;
 @property (assign) IBOutlet NSButton *shouldGenerateClassesOnlyForDataPart;
-@property (assign) IBOutlet NSButton *shouldUseSchemaToGenerateClassFiles;
+@property (assign) IBOutlet NSButton *shouldGenerateValidationMethods;
 
 - (IBAction)sourceTypeSegmentChanged:(id)sender;
 - (IBAction)generate:(id)sender;

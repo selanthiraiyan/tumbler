@@ -15,6 +15,7 @@
 
 @property (strong) NSMutableArray *jsonModels;
 @property (strong) NSString *pathAtWhichJSONFilesAreLocated;
+
 @end
 
 @implementation WindowController
@@ -191,7 +192,7 @@
         else if (! [isDirectory boolValue]) {
             NSString *fileName = [url lastPathComponent];
             
-            if (self.shouldUseSchemaToGenerateClassFiles.state == NSOnState) {
+            if (self.sourceTypeSegment.selectedSegment == 1) {
                 if ([fileName hasSuffix:@".schema"] == NO)
                     continue;
             }
@@ -210,13 +211,13 @@
             NSDictionary *requestPart = [dict objectForKey:@"request"];
             NSDictionary *responsePart = [dict objectForKey:@"response"];
             
-            if (self.shouldUseSchemaToGenerateClassFiles.state == NSOnState) {
+            if (self.sourceTypeSegment.selectedSegment == 1) {
                 requestPart = [[dict objectForKey:@"properties"] objectForKey:@"request"];
                 responsePart = [[dict objectForKey:@"properties"] objectForKey:@"response"];
             }
             
             if (self.shouldGenerateClassesOnlyForDataPart.state == NSOnState) {
-                if (self.shouldUseSchemaToGenerateClassFiles.state == NSOnState) {
+                if (self.sourceTypeSegment.selectedSegment == 1) {
                     requestPart = [[requestPart objectForKey:@"properties"] objectForKey:@"data"];
                     responsePart = [[responsePart objectForKey:@"properties"] objectForKey:@"data"];
                 }
@@ -233,7 +234,9 @@
             requestModel.servletVersion = servletVersion;
             requestModel.parentClassName = [self.parentClass stringValue];
             requestModel.isRequest = YES;
-            requestModel.schemaDefinition =requestPart;
+            if (self.shouldGenerateValidationMethods.state == NSOnState) {
+                requestModel.schemaDefinition =requestPart;
+            }
             
             className = [NSString stringWithFormat:@"%@%@ModelResponse", servletName, servletGroup];
             JSONModel *responseModel = [[JSONModel alloc]initWithName:className];
@@ -242,9 +245,11 @@
             responseModel.servletVersion = servletVersion;
             responseModel.parentClassName = [self.parentClass stringValue];
             responseModel.isRequest = NO;
-            responseModel.schemaDefinition = responsePart;
-
-            if (self.shouldUseSchemaToGenerateClassFiles.state == NSOnState) {
+            if (self.shouldGenerateValidationMethods.state == NSOnState) {
+                responseModel.schemaDefinition = responsePart;
+            }
+            
+            if (self.sourceTypeSegment.selectedSegment == 1) {
                 [self processDictSchema:requestPart usingJSONModel:requestModel];
                 [self processDictSchema:responsePart usingJSONModel:responseModel];
             }
@@ -299,14 +304,14 @@
 - (void)processDictSchema:(NSDictionary*)dict usingJSONModel:(JSONModel*)jsonModel
 {
     [self.jsonModels addObject:jsonModel];
-
+    
     NSDictionary *properties = [dict objectForKey:@"properties"];
-
+    
     for (NSString *key in [properties allKeys]) {
         
-
+        
         NSDictionary *property = [properties objectForKey:key];
-
+        
         NSString *type = [property objectForKey:@"type"];
         NSString *idFromSchema = key;
         
@@ -319,20 +324,24 @@
             if ([innerType isEqualToString:@"object"]) {
                 NSString *className = [NSString stringWithFormat:@"%@%@", jsonModel.className, [idFromSchema capitalizeFirstLetter]];
                 JSONModel *model = [[JSONModel alloc]initWithName:className outerClass:jsonModel];
-                model.schemaDefinition = [property objectForKey:@"items"];
+                if (self.shouldGenerateValidationMethods.state == NSOnState) {
+                    model.schemaDefinition = [property objectForKey:@"items"];
+                }
                 [self processDictSchema:[property objectForKey:@"items"] usingJSONModel:model];
             }
-
+            
         }
         else if ([type isEqualToString:@"object"]) {
             NSString *className = [NSString stringWithFormat:@"%@%@", jsonModel.className, [idFromSchema capitalizeFirstLetter]];
             JSONModel *model = [[JSONModel alloc]initWithName:className outerClass:jsonModel];
-            model.schemaDefinition = property;
-
+            if (self.shouldGenerateValidationMethods.state == NSOnState) {
+                model.schemaDefinition = property;
+            }
+            
             JSONDataType *dataType = [[JSONDataType alloc]initWithClassName:className  instanceName:idFromSchema];
             dataType.isOfCustomClass = YES;
             [jsonModel.consistsOfInstanceVarsOfClass addObject:dataType];
-
+            
             [self processDictSchema:property usingJSONModel:model];
         }
         else if ([type isEqualToString:@"boolean"]) {
@@ -341,12 +350,16 @@
         }
         else if ([type isEqualToString:@"integer"] || [type isEqualToString:@"number"]) {
             JSONDataType *dataType = [[JSONDataType alloc]initWithClassName:@"Number" instanceName:idFromSchema];
-            dataType.schemaDefinition = property;
+            if (self.shouldGenerateValidationMethods.state == NSOnState) {
+                dataType.schemaDefinition = property;
+            }
             [jsonModel.consistsOfInstanceVarsOfClass addObject:dataType];
         }
         else if ([type isEqualToString:@"string"]) {
             JSONDataType *dataType = [[JSONDataType alloc]initWithClassName:@"String" instanceName:idFromSchema];
-            dataType.schemaDefinition = property;
+            if (self.shouldGenerateValidationMethods.state == NSOnState) {
+                dataType.schemaDefinition = property;
+            }
             [jsonModel.consistsOfInstanceVarsOfClass addObject:dataType];
         }
         else if ([type isEqualToString:@"null"]) {

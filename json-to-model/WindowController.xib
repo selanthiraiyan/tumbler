@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="4510" systemVersion="12F37" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="4514" systemVersion="12F45" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment defaultVersion="1080" identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="4510"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="4514"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="WindowController">
@@ -13,7 +13,8 @@
                 <outlet property="password" destination="269" id="280"/>
                 <outlet property="shouldCleanUpFolderBeforeGenerating" destination="127" id="288"/>
                 <outlet property="shouldGenerateClassesOnlyForDataPart" destination="282" id="289"/>
-                <outlet property="shouldUseSchemaToGenerateClassFiles" destination="0YZ-Jz-mOS" id="4e2-MN-NDJ"/>
+                <outlet property="shouldGenerateValidationMethods" destination="03U-3V-DeN" id="WCe-Nj-RIZ"/>
+                <outlet property="shouldUseSchemaToGenerateClassFiles" destination="1di-qy-iwT" id="K23-eu-Oxe"/>
                 <outlet property="sourceTypeSegment" destination="159" id="164"/>
                 <outlet property="status" destination="94" id="104"/>
                 <outlet property="targetPath" destination="87" id="121"/>
@@ -86,8 +87,8 @@
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
-                    <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="78">
-                        <rect key="frame" x="30" y="201" width="78" height="17"/>
+                    <textField verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="78">
+                        <rect key="frame" x="31" y="190" width="78" height="17"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Target path" id="79">
                             <font key="font" metaFont="system"/>
@@ -95,14 +96,10 @@
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
-                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="87">
-                        <rect key="frame" x="135" y="179" width="274" height="39"/>
+                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="87">
+                        <rect key="frame" x="135" y="186" width="468" height="25"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="39" id="90"/>
-                            <constraint firstAttribute="width" constant="274" id="93"/>
-                        </constraints>
-                        <textFieldCell key="cell" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="Location to generate model classes" drawsBackground="YES" id="88">
+                        <textFieldCell key="cell" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="justified" placeholderString="Location to generate model classes" drawsBackground="YES" id="88">
                             <font key="font" metaFont="system"/>
                             <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -121,7 +118,7 @@
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
-                    <button translatesAutoresizingMaskIntoConstraints="NO" id="105">
+                    <button misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="105">
                         <rect key="frame" x="619" y="186" width="26" height="25"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <buttonCell key="cell" type="square" title="..." bezelStyle="shadowlessSquare" imagePosition="overlaps" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="106">
@@ -242,14 +239,37 @@
                             <font key="font" metaFont="system"/>
                         </buttonCell>
                     </button>
-                    <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0YZ-Jz-mOS">
-                        <rect key="frame" x="133" y="251" width="319" height="22"/>
+                    <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="03U-3V-DeN">
+                        <rect key="frame" x="393" y="108" width="246" height="22"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <buttonCell key="cell" type="check" title="Use schema to generate classes" bezelStyle="regularSquare" imagePosition="left" inset="2" id="Tyf-nV-oJ2">
+                        <buttonCell key="cell" type="check" title="Generate validation methods" bezelStyle="regularSquare" imagePosition="left" inset="2" id="NFV-NZ-ioB">
                             <behavior key="behavior" pushIn="YES" changeContents="YES" lightByContents="YES"/>
                             <font key="font" metaFont="system"/>
                         </buttonCell>
                     </button>
+                    <segmentedControl verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1di-qy-iwT">
+                        <rect key="frame" x="133" y="242" width="150" height="24"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <segmentedCell key="cell" alignment="left" style="rounded" trackingMode="selectOne" id="HrD-sU-L37">
+                            <font key="font" metaFont="system"/>
+                            <segments>
+                                <segment label="Example"/>
+                                <segment label="Schema" selected="YES" tag="1"/>
+                            </segments>
+                        </segmentedCell>
+                        <connections>
+                            <action selector="sourceTypeSegmentChanged:" target="-2" id="pvo-Pj-VAz"/>
+                        </connections>
+                    </segmentedControl>
+                    <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="G4b-e9-omx">
+                        <rect key="frame" x="30" y="246" width="100" height="17"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Generate using" id="7u2-5Y-AEF">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
                 </subviews>
                 <constraints>
                     <constraint firstItem="9" firstAttribute="top" secondItem="17" secondAttribute="top" id="51"/>

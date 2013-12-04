@@ -38,7 +38,10 @@
 
 - (NSString*)getDeclarationHeaderPart
 {
-    NSString *comment = [NSString stringWithFormat:@" /*%@*/", self.schemaDefinition];
+    NSString *comment = @"";
+    if (self.schemaDefinition) {
+        comment = [NSString stringWithFormat:@" /*%@*/", self.schemaDefinition];
+    }
 
     if ([self.className isEqualToString:@"BOOL"]) {
         return [NSString stringWithFormat:@"\n@property %@ %@;%@", className, instanceName, comment];
@@ -57,7 +60,7 @@
 
 - (NSString*)getValidationHeaderPart
 {
-    if (self.schemaDefinition && SHOULD_CREATE_VALIDATION_METHODS) {
+    if (self.schemaDefinition) {
         return [NSString stringWithFormat:@"\n- (BOOL)is%@Valid:(NSError**)error;", [self.instanceName capitalizeFirstLetter]];
     }
     return nil;
@@ -65,7 +68,7 @@
 
 - (NSString*)getValidationImplementationPart
 {
-    if (self.schemaDefinition && SHOULD_CREATE_VALIDATION_METHODS) {
+    if (self.schemaDefinition) {
         
         if ([self.className isEqualToString:@"NSNumber"]) {
             return [NSString stringWithFormat:@"\n- (BOOL)is%@Valid:(NSError**)error\n{\n%@\n}", [self.instanceName capitalizeFirstLetter], [NumberValidator getValidationMethodForNumberNamed:self.instanceName usingSchemaDefinition:self.schemaDefinition]];
