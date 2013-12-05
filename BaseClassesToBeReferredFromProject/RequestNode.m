@@ -29,8 +29,14 @@
             }
         }
         
-        Node *n = [[dataPart toDict] createNodeContainingArrayUsingKeyAsKeyword:NO];
-        [self addNode:n byPathStr:@"/request/data"];
+        NSDictionary *dictionary = [dataPart toDict];
+        if ([dictionary count] == 0) {
+            [self addElement:[NSDictionary dictionary] byPathStr:@"/request/data"];
+        }
+        else {
+            Node *n = [dictionary createNodeContainingArrayUsingKeyAsKeyword:NO];
+            [self addNode:n byPathStr:@"/request/data"];
+        }
     }
 	return self;
 }

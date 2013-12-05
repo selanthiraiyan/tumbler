@@ -36,6 +36,8 @@
 		4345F4B71807FE0C00C823D2 /* Condition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Condition.m; sourceTree = "<group>"; };
 		4345F4B91807FFDE00C823D2 /* Validator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Validator.h; sourceTree = "<group>"; };
 		4345F4BA1807FFDE00C823D2 /* Validator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Validator.m; sourceTree = "<group>"; };
+		4376C42318505A79007E4BE3 /* RequestNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RequestNode.h; sourceTree = "<group>"; };
+		4376C42418505A79007E4BE3 /* RequestNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RequestNode.m; sourceTree = "<group>"; };
 		43C2D07E180FF82B002C81FF /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = Tumbler/Images.xcassets; sourceTree = "<group>"; };
 		43C2EDD3178A694D00C45F14 /* Tumbler.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tumbler.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		43C2EDD6178A694D00C45F14 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
@@ -155,6 +157,8 @@
 		43E71C31181FB343006F80FA /* BaseClassesToBeReferredFromProject */ = {
 			isa = PBXGroup;
 			children = (
+				4376C42318505A79007E4BE3 /* RequestNode.h */,
+				4376C42418505A79007E4BE3 /* RequestNode.m */,
 				43E71C32181FB343006F80FA /* JSONModelBaseProtocol.h */,
 				43E71C33181FB343006F80FA /* ModelBase.h */,
 				43E71C34181FB343006F80FA /* ModelBase.m */,
