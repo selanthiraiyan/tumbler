@@ -192,7 +192,7 @@
         else if (! [isDirectory boolValue]) {
             NSString *fileName = [url lastPathComponent];
             
-            if (self.sourceTypeSegment.selectedSegment == 1) {
+            if (self.shouldUseSchemaToGenerateClassFiles.selectedSegment == 1) {
                 if ([fileName hasSuffix:@".schema"] == NO)
                     continue;
             }
@@ -211,13 +211,13 @@
             NSDictionary *requestPart = [dict objectForKey:@"request"];
             NSDictionary *responsePart = [dict objectForKey:@"response"];
             
-            if (self.sourceTypeSegment.selectedSegment == 1) {
+            if (self.shouldUseSchemaToGenerateClassFiles.selectedSegment == 1) {
                 requestPart = [[dict objectForKey:@"properties"] objectForKey:@"request"];
                 responsePart = [[dict objectForKey:@"properties"] objectForKey:@"response"];
             }
             
             if (self.shouldGenerateClassesOnlyForDataPart.state == NSOnState) {
-                if (self.sourceTypeSegment.selectedSegment == 1) {
+                if (self.shouldUseSchemaToGenerateClassFiles.selectedSegment == 1) {
                     requestPart = [[requestPart objectForKey:@"properties"] objectForKey:@"data"];
                     responsePart = [[responsePart objectForKey:@"properties"] objectForKey:@"data"];
                 }
@@ -249,7 +249,7 @@
                 responseModel.schemaDefinition = responsePart;
             }
             
-            if (self.sourceTypeSegment.selectedSegment == 1) {
+            if (self.shouldUseSchemaToGenerateClassFiles.selectedSegment == 1) {
                 [self processDictSchema:requestPart usingJSONModel:requestModel];
                 [self processDictSchema:responsePart usingJSONModel:responseModel];
             }
