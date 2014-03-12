@@ -34,7 +34,7 @@
             [self addElement:[NSDictionary dictionary] byPathStr:@"/request/data"];
         }
         else {
-            Node *n = [dictionary createNodeContainingArrayUsingKeyAsKeyword:NO];
+            Node *n = [dictionary createNode];
             [self addNode:n byPathStr:@"/request/data"];
         }
     }

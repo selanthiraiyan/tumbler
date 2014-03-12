@@ -104,6 +104,7 @@
             [dict setObject:myObject forKey:propertyName];
         }
     }
+    free(properties);
     return dict;
 }
 
