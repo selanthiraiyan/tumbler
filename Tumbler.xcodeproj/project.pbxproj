@@ -22,7 +22,8 @@
 		43C2EDF9178A6B0C00C45F14 /* WindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 43C2EDF7178A6B0C00C45F14 /* WindowController.xib */; };
 		43C2EE14178ABCAD00C45F14 /* JSONModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 43C2EE13178ABCAD00C45F14 /* JSONModel.m */; };
 		43C2EE1A178AC91000C45F14 /* JSONDataType.m in Sources */ = {isa = PBXBuildFile; fileRef = 43C2EE19178AC91000C45F14 /* JSONDataType.m */; };
-		43E71C35181FB343006F80FA /* ModelBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 43E71C34181FB343006F80FA /* ModelBase.m */; };
+		BA8F6A5C18D05B820000C143 /* ModelBase.m in Sources */ = {isa = PBXBuildFile; fileRef = BA8F6A5918D05B820000C143 /* ModelBase.m */; };
+		BA8F6A5D18D05B820000C143 /* RequestNode.m in Sources */ = {isa = PBXBuildFile; fileRef = BA8F6A5B18D05B820000C143 /* RequestNode.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,8 +37,6 @@
 		4345F4B71807FE0C00C823D2 /* Condition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Condition.m; sourceTree = "<group>"; };
 		4345F4B91807FFDE00C823D2 /* Validator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Validator.h; sourceTree = "<group>"; };
 		4345F4BA1807FFDE00C823D2 /* Validator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Validator.m; sourceTree = "<group>"; };
-		4376C42318505A79007E4BE3 /* RequestNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RequestNode.h; sourceTree = "<group>"; };
-		4376C42418505A79007E4BE3 /* RequestNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RequestNode.m; sourceTree = "<group>"; };
 		43C2D07E180FF82B002C81FF /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = Tumbler/Images.xcassets; sourceTree = "<group>"; };
 		43C2EDD3178A694D00C45F14 /* Tumbler.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tumbler.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		43C2EDD6178A694D00C45F14 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
@@ -59,9 +58,11 @@
 		43C2EE13178ABCAD00C45F14 /* JSONModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONModel.m; sourceTree = "<group>"; };
 		43C2EE18178AC91000C45F14 /* JSONDataType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONDataType.h; sourceTree = "<group>"; };
 		43C2EE19178AC91000C45F14 /* JSONDataType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONDataType.m; sourceTree = "<group>"; };
-		43E71C32181FB343006F80FA /* JSONModelBaseProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONModelBaseProtocol.h; sourceTree = "<group>"; };
-		43E71C33181FB343006F80FA /* ModelBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModelBase.h; sourceTree = "<group>"; };
-		43E71C34181FB343006F80FA /* ModelBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModelBase.m; sourceTree = "<group>"; };
+		BA8F6A5718D05B820000C143 /* JSONModelBaseProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONModelBaseProtocol.h; sourceTree = "<group>"; };
+		BA8F6A5818D05B820000C143 /* ModelBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModelBase.h; sourceTree = "<group>"; };
+		BA8F6A5918D05B820000C143 /* ModelBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModelBase.m; sourceTree = "<group>"; };
+		BA8F6A5A18D05B820000C143 /* RequestNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RequestNode.h; sourceTree = "<group>"; };
+		BA8F6A5B18D05B820000C143 /* RequestNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RequestNode.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,7 +80,7 @@
 		43C2EDCA178A694D00C45F14 = {
 			isa = PBXGroup;
 			children = (
-				43E71C31181FB343006F80FA /* BaseClassesToBeReferredFromProject */,
+				BA8F6A5618D05B810000C143 /* includes */,
 				43C2D07E180FF82B002C81FF /* Images.xcassets */,
 				43C2EDDC178A694D00C45F14 /* json-to-model */,
 				43C2EDD5178A694D00C45F14 /* Frameworks */,
@@ -154,16 +155,16 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		43E71C31181FB343006F80FA /* BaseClassesToBeReferredFromProject */ = {
+		BA8F6A5618D05B810000C143 /* includes */ = {
 			isa = PBXGroup;
 			children = (
-				4376C42318505A79007E4BE3 /* RequestNode.h */,
-				4376C42418505A79007E4BE3 /* RequestNode.m */,
-				43E71C32181FB343006F80FA /* JSONModelBaseProtocol.h */,
-				43E71C33181FB343006F80FA /* ModelBase.h */,
-				43E71C34181FB343006F80FA /* ModelBase.m */,
+				BA8F6A5718D05B820000C143 /* JSONModelBaseProtocol.h */,
+				BA8F6A5818D05B820000C143 /* ModelBase.h */,
+				BA8F6A5918D05B820000C143 /* ModelBase.m */,
+				BA8F6A5A18D05B820000C143 /* RequestNode.h */,
+				BA8F6A5B18D05B820000C143 /* RequestNode.m */,
 			);
-			path = BaseClassesToBeReferredFromProject;
+			path = includes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,11 +234,12 @@
 			files = (
 				4345F4AF1807C91600C823D2 /* NSString+StringHelper.m in Sources */,
 				4345F4B51807D2E700C823D2 /* StringValidator.m in Sources */,
-				43E71C35181FB343006F80FA /* ModelBase.m in Sources */,
+				BA8F6A5C18D05B820000C143 /* ModelBase.m in Sources */,
 				4345F4BB1807FFDE00C823D2 /* Validator.m in Sources */,
 				4345F4B21807CDB900C823D2 /* NumberValidator.m in Sources */,
 				43C2EDE3178A694D00C45F14 /* main.m in Sources */,
 				43C2EDEA178A694D00C45F14 /* AppDelegate.m in Sources */,
+				BA8F6A5D18D05B820000C143 /* RequestNode.m in Sources */,
 				43C2EDF8178A6B0C00C45F14 /* WindowController.m in Sources */,
 				43C2EE14178ABCAD00C45F14 /* JSONModel.m in Sources */,
 				43C2EE1A178AC91000C45F14 /* JSONDataType.m in Sources */,
