@@ -23,7 +23,6 @@
 		43C2EE14178ABCAD00C45F14 /* JSONModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 43C2EE13178ABCAD00C45F14 /* JSONModel.m */; };
 		43C2EE1A178AC91000C45F14 /* JSONDataType.m in Sources */ = {isa = PBXBuildFile; fileRef = 43C2EE19178AC91000C45F14 /* JSONDataType.m */; };
 		BA8F6A5C18D05B820000C143 /* ModelBase.m in Sources */ = {isa = PBXBuildFile; fileRef = BA8F6A5918D05B820000C143 /* ModelBase.m */; };
-		BA8F6A5D18D05B820000C143 /* RequestNode.m in Sources */ = {isa = PBXBuildFile; fileRef = BA8F6A5B18D05B820000C143 /* RequestNode.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -239,7 +238,6 @@
 				4345F4B21807CDB900C823D2 /* NumberValidator.m in Sources */,
 				43C2EDE3178A694D00C45F14 /* main.m in Sources */,
 				43C2EDEA178A694D00C45F14 /* AppDelegate.m in Sources */,
-				BA8F6A5D18D05B820000C143 /* RequestNode.m in Sources */,
 				43C2EDF8178A6B0C00C45F14 /* WindowController.m in Sources */,
 				43C2EE14178ABCAD00C45F14 /* JSONModel.m in Sources */,
 				43C2EE1A178AC91000C45F14 /* JSONDataType.m in Sources */,
