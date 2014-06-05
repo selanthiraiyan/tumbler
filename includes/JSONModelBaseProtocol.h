@@ -17,6 +17,10 @@
 - (NSString*)getClassNamePrefix;
 - (NSDictionary*)toDict;
 - (id)initWithDict:(NSDictionary*)dict;
+- (NSString*)toJSONString;
+
+@optional
+- (NSString*)decoratedJSONRequest;
 
 //For validation purpose
 - (BOOL)isValid:(NSError**)error;
