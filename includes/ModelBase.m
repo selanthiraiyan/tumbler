@@ -66,6 +66,7 @@
                 [self setValue:myObject forKey:propertyName];
             }
         }
+        free(properties);
     }
     return self;
 }
