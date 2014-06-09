@@ -13,6 +13,10 @@
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
+    
+//    NSString *appDomain = [[NSBundle mainBundle] bundleIdentifier];
+//    [[NSUserDefaults standardUserDefaults] removePersistentDomainForName:appDomain];
+    
     // Insert code here to initialize your application
     self.myWindowController = [[WindowController alloc]
                                 initWithWindowNibName:@"WindowController"];

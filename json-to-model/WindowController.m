@@ -47,6 +47,11 @@
     [self setUpUIElementsBasedOnSegmentSelection];
 }
 
+- (BOOL)shouldGenerateClassesFromFilesAtRepository
+{
+    return self.sourceTypeSegment.selectedSegment == 1;
+}
+
 - (void)setUpUIElementsBasedOnSegmentSelection
 {
     
@@ -56,12 +61,12 @@
     [self.jsonFilesLocation setEnabled:YES];
     [self.jsonFilesLocationButton setEnabled:YES];
     
-    if (self.sourceTypeSegment.selectedSegment == 0) {
+    if ([self shouldGenerateClassesFromFilesAtRepository] == NO) {
         [self.url setEnabled:NO];
         [self.userName setEnabled:NO];
         [self.password setEnabled:NO];
     }
-    else if (self.sourceTypeSegment.selectedSegment == 1) {
+    else {
         [self.jsonFilesLocation setEnabled:NO];
         [self.jsonFilesLocationButton setEnabled:NO];
     }
@@ -97,19 +102,23 @@
 }
 
 - (BOOL)canGenerate {
-    if ([self.url stringValue] == nil || [[self.url stringValue] isEqualToString:@""]) {
-        [self updateStatus:@"Please enter a url ..."];
-        return NO;
+    if ([self shouldGenerateClassesFromFilesAtRepository]) {
+        if ([self.url stringValue] == nil || [[self.url stringValue] isEqualToString:@""]) {
+            [self updateStatus:@"Please enter a repo url ..."];
+            return NO;
+        }
     }
-    else if ((self.sourceTypeSegment.selectedSegment == 0) && ([self.jsonFilesLocation stringValue] == nil || [[self.jsonFilesLocation stringValue] isEqualToString:@""])) {
-        [self updateStatus:@"Please select a valid source location for JSON files ..."];
-        return NO;
-    }
-    else if ([self.targetPath stringValue] == nil || [[self.targetPath stringValue] isEqualToString:@""]) {
-        [self updateStatus:@"Please select a valid target path ..."];
-        return NO;
+    else {
+        if ([self.jsonFilesLocation stringValue] == nil || [[self.jsonFilesLocation stringValue] isEqualToString:@""]) {
+            [self updateStatus:@"Please select the location of the local json files and schema ..."];
+            return NO;
+        }
     }
     
+    if ([self.targetPath stringValue] == nil || [[self.targetPath stringValue] isEqualToString:@""]) {
+        [self updateStatus:@"Please select a path to save the generated class files ..."];
+        return NO;
+    }
     return YES;
 }
 
@@ -123,11 +132,10 @@
         [self storeTargetPath:[self.targetPath stringValue]];
         [self storeParentClassName:[self.parentClass stringValue]];
         
-        [self updateStatus:[NSString stringWithFormat:@"Generating classes from URL %@", url]];
         
         [self cleanup];
         
-        if (self.sourceTypeSegment.selectedSegment != 0) {
+        if ([self shouldGenerateClassesFromFilesAtRepository]) {
             [self checkoutFiles:url];
             self.pathAtWhichJSONFilesAreLocated = PATH_TO_CHECKOUT_SCHEMA_FILES;
         }
@@ -135,6 +143,8 @@
             self.pathAtWhichJSONFilesAreLocated = [self.jsonFilesLocation stringValue];
         }
         
+        [self updateStatus:[NSString stringWithFormat:@"Generating classes from json files at %@", self.pathAtWhichJSONFilesAreLocated]];
+
         [self processFiles];
         
         [self processJSONModelsAndCreateClassFiles];

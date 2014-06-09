@@ -89,7 +89,7 @@
         if ([myObject isKindOfClass:[NSArray class]]) {
             NSMutableArray *dictArray = [NSMutableArray array];
             for (id object in myObject) {
-                if ([myObject respondsToSelector:@selector(toDict)]) {
+                if ([object respondsToSelector:@selector(toDict)]) {
                     [dictArray addObject:[object toDict]];
                 }
                 else {
