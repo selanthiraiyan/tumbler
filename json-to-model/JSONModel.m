@@ -78,14 +78,23 @@
         [headerValidationPart appendString:selfValidation];
     }
     for (JSONDataType *dataType in self.consistsOfInstanceVarsOfClass) {
-        [headerInnerPart appendString:[dataType getDeclarationHeaderPart]];
-        if (dataType.isOfCustomClass) {
+        
+        if ([dataType respondsToSelector:@selector(getDeclarationHeaderPart)]) {
+            [headerInnerPart appendString:[dataType getDeclarationHeaderPart]];
+            if (dataType.isOfCustomClass) {
+                [headerContent appendString:[NSString stringWithFormat:@"\n#import \"%@.h\"", dataType.className]];
+            }
+        }
+        
+        if ([dataType isKindOfClass:[JSONModel class]]) {
             [headerContent appendString:[NSString stringWithFormat:@"\n#import \"%@.h\"", dataType.className]];
         }
         
-        NSString *validationMethod = [dataType getValidationHeaderPart];
-        if (validationMethod) {
-            [headerValidationPart appendString:validationMethod];
+        if ([dataType respondsToSelector:@selector(getValidationHeaderPart)]) {
+            NSString *validationMethod = [dataType getValidationHeaderPart];
+            if (validationMethod) {
+                [headerValidationPart appendString:validationMethod];
+            }
         }
     }
     
@@ -119,11 +128,15 @@
     }
     for (JSONDataType *dataType in self.consistsOfInstanceVarsOfClass) {
         
-        [implementationInnerPart appendString:[dataType getDeclarationImplementationPart]];
+        if ([dataType respondsToSelector:@selector(getDeclarationImplementationPart)]) {
+            [implementationInnerPart appendString:[dataType getDeclarationImplementationPart]];
+        }
         
-        NSString *validationMethod = [dataType getValidationImplementationPart];
-        if (validationMethod) {
-            [implementationValidationPart appendString:validationMethod];
+        if ([dataType respondsToSelector:@selector(getValidationImplementationPart)]) {
+            NSString *validationMethod = [dataType getValidationImplementationPart];
+            if (validationMethod) {
+                [implementationValidationPart appendString:validationMethod];
+            }
         }
     }
     

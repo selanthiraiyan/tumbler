@@ -289,7 +289,8 @@
             if ([objectInArray isKindOfClass:[NSDictionary class]]) {
                 NSString *className = [NSString stringWithFormat:@"%@%@", jsonModel.className, [key capitalizeFirstLetter]];
                 JSONModel *model = [[JSONModel alloc]initWithName:className outerClass:jsonModel];
-                
+                [jsonModel.consistsOfInstanceVarsOfClass addObject:model];
+
                 [self processDictJSON:objectInArray usingJSONModel:model];
             }
         }
@@ -297,6 +298,7 @@
             
             NSString *className = [NSString stringWithFormat:@"%@%@", jsonModel.className, [key capitalizeFirstLetter]];
             JSONModel *model = [[JSONModel alloc]initWithName:className outerClass:jsonModel];
+            [jsonModel.consistsOfInstanceVarsOfClass addObject:model];
             
             JSONDataType *dataType = [[JSONDataType alloc]initWithClassName:className  instanceName:key];
             dataType.isOfCustomClass = YES;
@@ -334,6 +336,8 @@
             if ([innerType isEqualToString:@"object"]) {
                 NSString *className = [NSString stringWithFormat:@"%@%@", jsonModel.className, [idFromSchema capitalizeFirstLetter]];
                 JSONModel *model = [[JSONModel alloc]initWithName:className outerClass:jsonModel];
+                [jsonModel.consistsOfInstanceVarsOfClass addObject:model];
+                
                 if (self.shouldGenerateValidationMethods.state == NSOnState) {
                     model.schemaDefinition = [property objectForKey:@"items"];
                 }
@@ -344,6 +348,8 @@
         else if ([type isEqualToString:@"object"]) {
             NSString *className = [NSString stringWithFormat:@"%@%@", jsonModel.className, [idFromSchema capitalizeFirstLetter]];
             JSONModel *model = [[JSONModel alloc]initWithName:className outerClass:jsonModel];
+            [jsonModel.consistsOfInstanceVarsOfClass addObject:model];
+
             if (self.shouldGenerateValidationMethods.state == NSOnState) {
                 model.schemaDefinition = property;
             }
