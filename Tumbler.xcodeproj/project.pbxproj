@@ -23,6 +23,7 @@
 		43C2EE14178ABCAD00C45F14 /* JSONModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 43C2EE13178ABCAD00C45F14 /* JSONModel.m */; };
 		43C2EE1A178AC91000C45F14 /* JSONDataType.m in Sources */ = {isa = PBXBuildFile; fileRef = 43C2EE19178AC91000C45F14 /* JSONDataType.m */; };
 		BA8F6A5C18D05B820000C143 /* ModelBase.m in Sources */ = {isa = PBXBuildFile; fileRef = BA8F6A5918D05B820000C143 /* ModelBase.m */; };
+		EBEACFD619474B5500F4BF3B /* Mac-Terminal-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = EBEACFD519474B5500F4BF3B /* Mac-Terminal-icon.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +63,7 @@
 		BA8F6A5918D05B820000C143 /* ModelBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModelBase.m; sourceTree = "<group>"; };
 		BA8F6A5A18D05B820000C143 /* RequestNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RequestNode.h; sourceTree = "<group>"; };
 		BA8F6A5B18D05B820000C143 /* RequestNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RequestNode.m; sourceTree = "<group>"; };
+		EBEACFD519474B5500F4BF3B /* Mac-Terminal-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Mac-Terminal-icon.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 		43C2EDCA178A694D00C45F14 = {
 			isa = PBXGroup;
 			children = (
+				EBEACFD519474B5500F4BF3B /* Mac-Terminal-icon.png */,
 				BA8F6A5618D05B810000C143 /* includes */,
 				43C2D07E180FF82B002C81FF /* Images.xcassets */,
 				43C2EDDC178A694D00C45F14 /* json-to-model */,
@@ -219,6 +222,7 @@
 			files = (
 				43C2EDE1178A694D00C45F14 /* InfoPlist.strings in Resources */,
 				43C2D07F180FF82B002C81FF /* Images.xcassets in Resources */,
+				EBEACFD619474B5500F4BF3B /* Mac-Terminal-icon.png in Resources */,
 				43C2EDED178A694E00C45F14 /* MainMenu.xib in Resources */,
 				43C2EDF9178A6B0C00C45F14 /* WindowController.xib in Resources */,
 			);
@@ -329,6 +333,7 @@
 		43C2EDF1178A694E00C45F14 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "json-to-model/Tumbler-Prefix.pch";
@@ -341,6 +346,7 @@
 		43C2EDF2178A694E00C45F14 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "json-to-model/Tumbler-Prefix.pch";
