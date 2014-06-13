@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name         = 'tumbler'
-  spec.version      = '0.0.4'
+  spec.version      = '0.0.5'
   spec.license      = { :type => 'BSD' }
   spec.homepage     = 'https://www.assembla.com/code/iphone2/git-26/nodes'
   spec.authors      = { 'Sharma Elanthiraiyan' => 'sharma@inxsasia.com' }
