@@ -22,10 +22,7 @@
         if ([className1 hasSuffix:@"String"]) {
             className = @"NSString";
         }
-        else if ([className1 hasSuffix:@"Boolean"]) {
-            className = @"BOOL";
-        }
-        else if ([className1 hasSuffix:@"Number"]) {
+        else if ([className1 hasSuffix:@"Number"] || [className1 hasSuffix:@"Boolean"]) {
             className = @"NSNumber";
         }
         else {
@@ -43,13 +40,7 @@
         comment = [NSString stringWithFormat:@" /*%@*/", self.schemaDefinition];
     }
 
-    if ([self.className isEqualToString:@"BOOL"]) {
-        return [NSString stringWithFormat:@"\n@property %@ %@;%@", className, instanceName, comment];
-        
-    }
-    else {
-        return [NSString stringWithFormat:@"\n@property (strong) %@ *%@;%@", className, instanceName, comment];
-    }
+    return [NSString stringWithFormat:@"\n@property (strong) %@ *%@;%@", className, instanceName, comment];
     
 }
 
