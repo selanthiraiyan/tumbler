@@ -1,0 +1,224 @@
+[33mcommit e52b0220d0f63fda09751f8029d4fb5d488b4de6[m[33m ([1;36mHEAD[m[33m, [1;31morigin/master[m[33m, [1;31morigin/HEAD[m[33m, [1;31malt/master[m[33m, [1;32mmaster[m[33m)[m
+Author: Sharma Elanthiraiyan <sharma@inxsasia.com>
+Date:   Thu Jun 19 15:45:30 2014 +0530
+
+    Boolean treated with NSNumber
+
+[33mcommit c16f4d3fa78e1cbf72ee474c81038c7a8cc884a5[m[33m ([1;33mtag: 1.0.1[m[33m)[m
+Author: Sharma Elanthiraiyan <sharma@inxsasia.com>
+Date:   Wed Jun 18 18:29:44 2014 +0530
+
+    extra archs added. podspec file updated.
+
+[33mcommit ce40ed1615f7806d026e759985b68ac7fc7504c4[m
+Author: Sharma Elanthiraiyan <sharma@inxsasia.com>
+Date:   Tue Jun 17 12:02:39 2014 +0530
+
+    Podfile updated.
+
+[33mcommit 3a80ccf3fd1679447b56491ce21475047561d6eb[m[33m ([1;33mtag: 1.0.0[m[33m)[m
+Author: Kumaresan Duraiswamy <kumaresan@marketsimplified.com>
+Date:   Fri Jun 13 19:29:09 2014 +0530
+
+    Icon file added
+
+[33mcommit 28ade4ac4620e99eb3f5be6a02556838554bae6b[m
+Author: Kumaresan Duraiswamy <kumaresan@marketsimplified.com>
+Date:   Fri Jun 13 19:28:30 2014 +0530
+
+    podspec file
+
+[33mcommit 45ee9bd0216b04918fbf3c743d3c7875633adcd3[m
+Author: Kumaresan Duraiswamy <kumaresan@marketsimplified.com>
+Date:   Fri Jun 13 19:28:14 2014 +0530
+
+    podspec file
+
+[33mcommit b8b536986bb57aec380f99c0d542409de74b062d[m
+Author: Sharma Elanthiraiyan <sharma@inxsasia.com>
+Date:   Fri Jun 13 19:05:20 2014 +0530
+
+    pod file updated
+
+[33mcommit fcff142dbecc5323e8750b7543628257481743c8[m
+Author: Sharma Elanthiraiyan <sharma@inxsasia.com>
+Date:   Fri Jun 13 18:52:51 2014 +0530
+
+    podspec file updated
+
+[33mcommit 638234e8118aaec66761f00d52d4716dd3c0e363[m
+Author: Sharma Elanthiraiyan <sharma@inxsasia.com>
+Date:   Fri Jun 13 18:47:37 2014 +0530
+
+    podspec file updated
+
+[33mcommit 1b4299afa0a0907e1e9eb0a53d3a85eb732bbb10[m
+Author: Sharma Elanthiraiyan <sharma@inxsasia.com>
+Date:   Fri Jun 13 18:17:54 2014 +0530
+
+    Test license file added. podspec file updated
+
+[33mcommit 445e8813863c5a738d96339c47ac5866bbb221f1[m
+Author: Sharma Elanthiraiyan <sharma@inxsasia.com>
+Date:   Fri Jun 13 17:33:28 2014 +0530
+
+    podspec file introduced
+
+[33mcommit a8a275c72d96dd71f5acced8f4ae28d94bfc32c1[m
+Author: Sharma Elanthiraiyan <sharma@inxsasia.com>
+Date:   Mon Jun 9 20:50:42 2014 +0530
+
+    import statement for related header files added to main header file.
+
+[33mcommit 07b217a6a2e0aa806fda7659d9bd11fe3db28ad9[m
+Author: Sharma Elanthiraiyan <sharma@inxsasia.com>
+Date:   Mon Jun 9 16:08:20 2014 +0530
+
+    Bug fixes to ModelBase file. Code refactored in application level
+
+[33mcommit c4086a59e200077d1b60930ee63f8114dcdcbb9d[m
+Author: Sharma Elanthiraiyan <sharma@inxsasia.com>
+Date:   Thu Jun 5 17:22:46 2014 +0530
+
+    Memory leak fixed
+
+[33mcommit 6577c7f87a7b8af6a2331d0a3ef7e784c52e2657[m
+Author: Sharma Elanthiraiyan <sharma@inxsasia.com>
+Date:   Thu Jun 5 14:12:18 2014 +0530
+
+    decoratedJSONRequest method added to protocol
+
+[33mcommit 6a48f6efe681a7557ca4d3280abc56402d034122[m
+Author: Sharma Elanthiraiyan <sharma@inxsasia.com>
+Date:   Wed Mar 12 15:01:41 2014 +0530
+
+    RequestNode reference removed from project to ensure smooth build
+
+[33mcommit 6865662fa156a7a7352fc23c1805ef11ac4c5491[m
+Merge: d0a86d5 2b47081
+Author: Sharma Elanthiraiyan <sharma@inxsasia.com>
+Date:   Wed Mar 12 14:58:21 2014 +0530
+
+    Merge branch 'master' of git.assembla.com:iphone2.classGenerator
+
+[33mcommit d0a86d5f48160fb747d8c01ad3b2e75cecd5f3db[m
+Author: Sharma Elanthiraiyan <sharma@inxsasia.com>
+Date:   Wed Mar 12 14:57:49 2014 +0530
+
+    Altered folder structure
+
+[33mcommit 2b470814b754d15ea40701ff2ff41b8205df3b53[m
+Author: Sharma Elanthiraiyan <sharma@inxsasia.com>
+Date:   Fri Dec 27 10:58:32 2013 +0530
+
+    createNode method called while forming node from dictionary
+
+[33mcommit cfec188776dca97c06a5d5e69863014024121193[m
+Author: Sharma Elanthiraiyan <sharma@inxsasia.com>
+Date:   Fri Dec 20 11:24:23 2013 +0530
+
+    Memory leak fix
+
+[33mcommit 316c80b3fe6c6c9bc717c56f6ee7338b1c89a910[m
+Author: Sharma Elanthiraiyan <sharma@inxsasia.com>
+Date:   Wed Dec 11 12:54:18 2013 +0530
+
+    Schema generation segmented control bug fixed.
+
+[33mcommit e3695f8b2ec126abd3dcd5f6f0fda523131417f0[m
+Author: Sharma Elanthiraiyan <sharma@inxsasia.com>
+Date:   Thu Dec 5 12:29:06 2013 +0530
+
+    Modified the Rquest node and removed the user state.
+
+[33mcommit 3b6da786639915d1f767ff75aa9125464f268d14[m
+Author: Sharma Elanthiraiyan <sharma@inxsasia.com>
+Date:   Wed Dec 4 15:28:48 2013 +0530
+
+    Added checkbox to opt for creating validation methods.
+    Generated validation methods only if schema definition is available.
+    User interface updated.
+
+[33mcommit 2ad0a665b82a24f265b7e80c0e5f55e86b06c7ac[m
+Author: Sharma Elanthiraiyan <sharma@inxsasia.com>
+Date:   Tue Nov 19 17:48:12 2013 +0530
+
+    The property name added along with the validation code.
+
+[33mcommit 12db120ad23b96f1be4fff0dfeb285aa722fcb83[m
+Author: Sharma Elanthiraiyan <sharma@inxsasia.com>
+Date:   Tue Nov 19 17:08:53 2013 +0530
+
+    Handled nil value properly while converting to dictionary.
+
+[33mcommit 14d4d863a87474206f72634f2cceefb81182d9fe[m
+Author: Sharma Elanthiraiyan <sharma@inxsasia.com>
+Date:   Tue Nov 19 16:07:52 2013 +0530
+
+    Typo in ModelBase updated.
+
+[33mcommit 8259d513b57524a5cad75cb5956de17a8d54547a[m
+Author: Sharma Elanthiraiyan <sharma@inxsasia.com>
+Date:   Tue Nov 19 12:42:19 2013 +0530
+
+    Updated Model class to adapt array of strings and objects inside one object.
+
+[33mcommit e81575afbe6d8b94c3949aea649b255661937b60[m
+Author: Sharma Elanthiraiyan <sharma@inxsasia.com>
+Date:   Mon Nov 18 17:31:09 2013 +0530
+
+    ModelBase altered to adapt custom error messages.
+
+[33mcommit 075ec9a70a27b9ee99004e878610cf4740af20dc[m
+Author: Sharma Elanthiraiyan <sharma@inxsasia.com>
+Date:   Mon Nov 18 17:08:43 2013 +0530
+
+    Bugs in condition generation fixed.
+
+[33mcommit 593c2ef266dc1f7e5c09eb540378da3fd4c54582[m
+Author: Sharma Elanthiraiyan <sharma@inxsasia.com>
+Date:   Mon Nov 18 17:05:50 2013 +0530
+
+    Updated the validation method generation classes. Added RequestNode class into the project
+
+[33mcommit a5c7845b4897d63b8ce657c4c4be679968304f6c[m
+Author: Sharma Elanthiraiyan <sharma@inxsasia.com>
+Date:   Fri Nov 15 12:16:49 2013 +0530
+
+    Schema definition added as comment to the header file for easy reference.
+
+[33mcommit ef32cdfffcd774be62350643109b22736db0d782[m
+Author: Sharma Elanthiraiyan <sharma@inxsasia.com>
+Date:   Fri Nov 8 12:17:54 2013 +0530
+
+    Validation methods auto generated based on schema definition.
+
+[33mcommit 50cc08f33477f7be68b5cf2ef022139d7dc300f6[m
+Author: Sharma Elanthiraiyan <sharma@inxsasia.com>
+Date:   Tue Oct 29 14:43:05 2013 +0530
+
+    Added ModelBased and protocol into the project itself. This is done so that those three class files will be referred from the project directly
+
+[33mcommit d818fcb0ab1e4c4df037bbdb4ca25c227908b8dc[m
+Author: Sharma Elanthiraiyan <sharma@inxsasia.com>
+Date:   Tue Oct 29 14:29:17 2013 +0530
+
+    Removed unwanted files
+
+[33mcommit dd9004346860c17b5ff8ced7f435bd6e38c4c751[m
+Author: Sharma Elanthiraiyan <sharma@inxsasia.com>
+Date:   Tue Oct 29 14:26:34 2013 +0530
+
+    Updated the gitignore file
+
+[33mcommit 79a35ff87dabc31b8cd0d83cac7e533cd1f1724c[m
+Author: Sharma Elanthiraiyan <sharma@inxsasia.com>
+Date:   Tue Oct 29 14:24:08 2013 +0530
+
+    Added gitignore file
+
+[33mcommit 2f46b208a757a5ea348f5c95247b29143710ab5c[m
+Author: Sharma Elanthiraiyan <sharma@inxsasia.com>
+Date:   Tue Oct 29 14:23:09 2013 +0530
+
+    Initial commit
