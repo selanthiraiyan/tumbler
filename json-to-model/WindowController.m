@@ -212,6 +212,9 @@
             }
             
             NSArray *splittedString = [fileName componentsSeparatedByString:@"_"];
+            if ([splittedString count] != 3) {
+                [NSException raise:@"Invalid file name found." format:@"The file name %@ is invalid. Please rename file.", fileName];
+            }
             NSString *servletGroup = [splittedString objectAtIndex:0];
             NSString *servletName = [splittedString objectAtIndex:1];
             NSString *servletVersion = [[splittedString objectAtIndex:2] substringToIndex:5];
