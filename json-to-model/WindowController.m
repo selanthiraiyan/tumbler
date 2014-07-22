@@ -145,11 +145,11 @@
         
         [self updateStatus:[NSString stringWithFormat:@"Generating classes from json files at %@", self.pathAtWhichJSONFilesAreLocated]];
 
-        [self processFiles];
-        
-        [self processJSONModelsAndCreateClassFiles];
-        
-        [self updateStatus:@"Model classes generated. Have fun coding ..."];
+        if ([self processFiles]) {
+            [self processJSONModelsAndCreateClassFiles];
+            [self updateStatus:@"Model classes generated. Have fun coding ..."];
+        }
+
     }
 }
 
@@ -189,7 +189,7 @@
     return [model getImplementationPart];
 }
 
-- (void)processFiles
+- (BOOL)processFiles
 {
     self.jsonModels = [NSMutableArray array];
     NSDirectoryEnumerator *enumerator = [self getEnumeratorFromPath:self.pathAtWhichJSONFilesAreLocated];
@@ -213,7 +213,9 @@
             
             NSArray *splittedString = [fileName componentsSeparatedByString:@"_"];
             if ([splittedString count] != 3) {
-                [NSException raise:@"Invalid file name found." format:@"The file name %@ is invalid. Please rename file.", fileName];
+                NSString *exceptionMessage = [NSString stringWithFormat:@"The file name %@ is invalid. Please rename file.", fileName];
+                [self updateStatus:exceptionMessage];
+                return NO;
             }
             NSString *servletGroup = [splittedString objectAtIndex:0];
             NSString *servletName = [splittedString objectAtIndex:1];
@@ -272,6 +274,7 @@
             }
         }
     }
+    return YES;
 }
 
 - (void)processDictJSON:(NSDictionary*)dict usingJSONModel:(JSONModel*)jsonModel
