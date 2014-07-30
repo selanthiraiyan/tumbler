@@ -512,7 +512,7 @@
 #pragma mark Helper methods
 - (NSDirectoryEnumerator*)getEnumeratorFromPath:(NSString*)path {
     NSFileManager *fileManager = [[NSFileManager alloc] init];
-    NSURL *directoryURL = [NSURL URLWithString:path]; // URL pointing to the directory you want to browse
+    NSURL *directoryURL = [NSURL fileURLWithPath:path]; // URL pointing to the directory you want to browse
     NSArray *keys = [NSArray arrayWithObject:NSURLIsDirectoryKey];
     
     NSDirectoryEnumerator *enumerator = [fileManager
