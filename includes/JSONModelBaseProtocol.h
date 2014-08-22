@@ -11,16 +11,13 @@
 @protocol JSONModelBaseProtocol <NSObject>
 
 @required
-- (NSString*)getServletName;
-- (NSString*)getServletGroup;
-- (NSString*)getServletVersion;
++ (NSString*)getServletName;
++ (NSString*)getServletGroup;
++ (NSString*)getServletVersion;
 - (NSString*)getClassNamePrefix;
 - (NSDictionary*)toDict;
 - (id)initWithDict:(NSDictionary*)dict;
 - (NSString*)toJSONString;
-
-@optional
-- (NSString*)decoratedJSONRequest;
 
 //For validation purpose
 - (BOOL)isValid:(NSError**)error;

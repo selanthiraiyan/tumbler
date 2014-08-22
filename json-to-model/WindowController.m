@@ -294,6 +294,9 @@
             
             if ([objectInArray isKindOfClass:[NSDictionary class]]) {
                 NSString *className = [NSString stringWithFormat:@"%@%@", jsonModel.className, [key capitalizeFirstLetter]];
+                
+                [dataType appendComment:[NSString stringWithFormat:@"Array of objects of class %@", className]];
+
                 JSONModel *model = [[JSONModel alloc]initWithName:className outerClass:jsonModel];
                 [jsonModel.consistsOfInstanceVarsOfClass addObject:model];
 
@@ -307,7 +310,6 @@
             [jsonModel.consistsOfInstanceVarsOfClass addObject:model];
             
             JSONDataType *dataType = [[JSONDataType alloc]initWithClassName:className  instanceName:key];
-            dataType.isOfCustomClass = YES;
             [jsonModel.consistsOfInstanceVarsOfClass addObject:dataType];
             
             [self processDictJSON:object usingJSONModel:model];
@@ -341,6 +343,10 @@
             
             if ([innerType isEqualToString:@"object"]) {
                 NSString *className = [NSString stringWithFormat:@"%@%@", jsonModel.className, [idFromSchema capitalizeFirstLetter]];
+                
+                [dataType appendComment:[NSString stringWithFormat:@"Array of objects of class %@", className]];
+
+                
                 JSONModel *model = [[JSONModel alloc]initWithName:className outerClass:jsonModel];
                 [jsonModel.consistsOfInstanceVarsOfClass addObject:model];
                 
@@ -361,7 +367,6 @@
             }
             
             JSONDataType *dataType = [[JSONDataType alloc]initWithClassName:className  instanceName:idFromSchema];
-            dataType.isOfCustomClass = YES;
             [jsonModel.consistsOfInstanceVarsOfClass addObject:dataType];
             
             [self processDictSchema:property usingJSONModel:model];

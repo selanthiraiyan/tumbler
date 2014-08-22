@@ -122,14 +122,21 @@
                                  encoding:NSUTF8StringEncoding];
 }
 
-- (NSString*)getServletName
++ (NSString*)getServletName
 {
-    return @"ServletName";
+    return @"svcName";
 }
-
-- (NSString*)getServletGroup
++ (NSString*)getServletGroup
 {
-    return @"ServletGroup";
+    return @"svcGroup";
+}
++ (NSString*)getServletVersion
+{
+    return @"svcVersion";
+}
+- (NSString*)getClassNamePrefix
+{
+    return @"classnameprefix";
 }
 
 - (NSString*)errorMessageForKey:(NSString*)key

@@ -12,9 +12,15 @@
 #import "StringValidator.h"
 #import "Constants.h"
 
+@interface JSONDataType ()
+
+@property (strong) NSMutableString *comment;
+
+@end
+
 @implementation JSONDataType
 @synthesize className, instanceName;
-@synthesize isOfCustomClass;
+@synthesize comment;
 - (id)initWithClassName:(NSString*)className1 instanceName:(NSString*)instanceName1
 {
     self = [super init];
@@ -29,19 +35,22 @@
             className = className1;
         }
         instanceName = instanceName1;
+        comment = [NSMutableString string];
     }
     return self;
 }
 
+- (void)appendComment:(NSString*)comment1
+{
+    if ([self.comment length] == 0) {
+        [self.comment appendString:@"//"];
+    }
+    [self.comment appendString:comment1];
+}
+
 - (NSString*)getDeclarationHeaderPart
 {
-    NSString *comment = @"";
-    if (self.schemaDefinition) {
-        comment = [NSString stringWithFormat:@" /*%@*/", self.schemaDefinition];
-    }
-
-    return [NSString stringWithFormat:@"\n@property (strong) %@ *%@;%@", className, instanceName, comment];
-    
+    return [NSString stringWithFormat:@"\n@property (strong) %@ *%@;%@", className, instanceName, self.comment];
 }
 
 - (NSString*)getDeclarationImplementationPart

@@ -10,6 +10,10 @@
 #import "JSONModelBaseProtocol.h"
 @interface ModelBase : NSObject <JSONModelBaseProtocol>
 
++ (NSString*)getServletName;
++ (NSString*)getServletGroup;
++ (NSString*)getServletVersion;
+- (NSString*)getClassNamePrefix;
 - (NSString*)toJSONString;
 - (id)initWithDict:(NSDictionary*)dict;
 - (NSString*)errorMessageForKey:(NSString*)key;

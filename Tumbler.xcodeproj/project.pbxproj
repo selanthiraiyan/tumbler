@@ -61,8 +61,6 @@
 		BA8F6A5718D05B820000C143 /* JSONModelBaseProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONModelBaseProtocol.h; sourceTree = "<group>"; };
 		BA8F6A5818D05B820000C143 /* ModelBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModelBase.h; sourceTree = "<group>"; };
 		BA8F6A5918D05B820000C143 /* ModelBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModelBase.m; sourceTree = "<group>"; };
-		BA8F6A5A18D05B820000C143 /* RequestNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RequestNode.h; sourceTree = "<group>"; };
-		BA8F6A5B18D05B820000C143 /* RequestNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RequestNode.m; sourceTree = "<group>"; };
 		EBEACFD519474B5500F4BF3B /* Mac-Terminal-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Mac-Terminal-icon.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -163,8 +161,6 @@
 				BA8F6A5718D05B820000C143 /* JSONModelBaseProtocol.h */,
 				BA8F6A5818D05B820000C143 /* ModelBase.h */,
 				BA8F6A5918D05B820000C143 /* ModelBase.m */,
-				BA8F6A5A18D05B820000C143 /* RequestNode.h */,
-				BA8F6A5B18D05B820000C143 /* RequestNode.m */,
 			);
 			path = includes;
 			sourceTree = "<group>";

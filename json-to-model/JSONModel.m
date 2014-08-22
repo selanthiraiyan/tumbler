@@ -81,9 +81,6 @@
         
         if ([dataType respondsToSelector:@selector(getDeclarationHeaderPart)]) {
             [headerInnerPart appendString:[dataType getDeclarationHeaderPart]];
-            if (dataType.isOfCustomClass) {
-                [headerContent appendString:[NSString stringWithFormat:@"\n#import \"%@.h\"", dataType.className]];
-            }
         }
         
         if ([dataType isKindOfClass:[JSONModel class]]) {
@@ -98,17 +95,11 @@
         }
     }
     
-    [headerInnerPart appendString:@"\n\n//Validation related methods"];
     [headerInnerPart appendString:headerValidationPart];
-    [headerInnerPart appendString:@"\n\n//Base related methods"];
-    [headerInnerPart appendString:@"\n+ (NSString*)getServletName;"];
-    [headerInnerPart appendString:@"\n+ (NSString*)getServletGroup;"];
-    [headerInnerPart appendString:@"\n+ (NSString*)getServletVersion;"];
-    [headerInnerPart appendString:@"\n- (NSString*)getClassNamePrefix;"];
     
     [headerContent appendString:[NSString stringWithFormat:@"\n@interface %@ : %@", self.className, parent]];
-    [headerContent appendString:[NSString stringWithFormat:@"\n%@;", headerInnerPart]];
-    [headerContent appendString:@"\n@end"];
+    [headerContent appendString:[NSString stringWithFormat:@"\n%@", headerInnerPart]];
+    [headerContent appendString:@"\n\n@end"];
     
     return headerContent;
     
@@ -141,14 +132,14 @@
     }
     
     [implementationInnerPart appendString:implementationValidationPart];
-    [implementationInnerPart appendString:[NSString stringWithFormat:@"\n+ (NSString*)getServletName \n{\n\treturn @\"%@\";\n}\n", self.servletName]];
+    [implementationInnerPart appendString:[NSString stringWithFormat:@"\n\n+ (NSString*)getServletName \n{\n\treturn @\"%@\";\n}\n", self.servletName]];
     [implementationInnerPart appendString:[NSString stringWithFormat:@"\n+ (NSString*)getServletGroup \n{\n\treturn @\"%@\";\n}\n", self.servletGroup]];
     [implementationInnerPart appendString:[NSString stringWithFormat:@"\n+ (NSString*)getServletVersion \n{\n\treturn @\"%@\";\n}\n", self.servletVersion]];
-    [implementationInnerPart appendString:[NSString stringWithFormat:@"\n- (NSString*)getClassNamePrefix \n{\n\treturn @\"%@\";\n}\n", self.className]];
+    [implementationInnerPart appendString:[NSString stringWithFormat:@"\n- (NSString*)getClassNamePrefix \n{\n\treturn @\"%@\";\n}", self.className]];
     
     
     [implementationContent appendString:[NSString stringWithFormat:@"\n@implementation %@", self.className]];
-    [implementationContent appendString:[NSString stringWithFormat:@"\n\n%@;", implementationInnerPart]];
+    [implementationContent appendString:[NSString stringWithFormat:@"\n\n%@", implementationInnerPart]];
     [implementationContent appendString:@"\n\n@end"];
     
     return implementationContent;
@@ -158,7 +149,7 @@
 - (NSString*)getValidationHeaderPart
 {
     if (self.schemaDefinition) {
-        return [NSString stringWithFormat:@"\n- (BOOL)isValid:(NSError**)error;"];
+        return [NSString stringWithFormat:@"\n\n//Validation related methods\n- (BOOL)isValid:(NSError**)error;"];
     }
     return nil;
 }

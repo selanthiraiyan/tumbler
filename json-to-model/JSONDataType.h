@@ -14,7 +14,6 @@
 @property (strong) NSString *instanceName;
 @property (strong) NSString *headerPart;
 @property (strong) NSString *implementationPart;
-@property BOOL isOfCustomClass;
 - (id)initWithClassName:(NSString*)className instanceName:(NSString*)instanceName;
 
 @property (strong) NSDictionary *schemaDefinition;
@@ -23,4 +22,6 @@
 - (NSString*)getDeclarationImplementationPart;
 - (NSString*)getValidationHeaderPart;
 - (NSString*)getValidationImplementationPart;
+
+- (void)appendComment:(NSString*)comment;
 @end
